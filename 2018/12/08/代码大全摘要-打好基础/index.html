@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 代码大全摘要-打好基础 · chuninsane</title><meta name="description" content="代码大全摘要-打好基础 - zhanggliangg"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://chuninsane.github.io/atom.xml" title="chuninsane"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/chuninsane" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">代码大全摘要-打好基础</h1><div class="post-info">Dec 8, 2018</div><div class="post-content"><h2 id="软件构建"><a href="#软件构建" class="headerlink" title="软件构建"></a>软件构建</h2><blockquote>
+<ul>
+<li>核心活动，唯一一项不可缺少的工作</li>
+<li>主要活动包含：详细设计、编码、调试、集成、单测与集成测试</li>
+<li>构建质量直接影响软件质量</li>
+</ul>
+</blockquote>
+<h2 id="构建前期的准备"><a href="#构建前期的准备" class="headerlink" title="构建前期的准备"></a>构建前期的准备</h2><ul>
+<li>越大的项目需要的准备工作越充分</li>
+<li>在软件开发中，如果需求被污染了，那么它就会污染架构，而架构又会污染构建，开发出的软件都是缺陷</li>
+<li>作为构建者，应抵抗尽快开始编码的欲望</li>
+<li>“需求稳定”是确保”超高等级的可靠性“的必备条件之一</li>
+</ul>
+<h3 id="开发方式的选择参考点"><a href="#开发方式的选择参考点" class="headerlink" title="开发方式的选择参考点"></a>开发方式的选择参考点</h3><h4 id="序列化开发法"><a href="#序列化开发法" class="headerlink" title="序列化开发法"></a>序列化开发法</h4><ul>
+<li>需求相当稳定</li>
+<li>设计直接了当，理解透彻</li>
+<li>开发团队对该领域非常熟悉</li>
+<li>项目的风险很小<br>&amp; 后期改变需求、设计和编码的代码很可能非常昂贵</li>
+</ul>
+<h4 id="迭代式开发法"><a href="#迭代式开发法" class="headerlink" title="迭代式开发法"></a>迭代式开发法</h4><ul>
+<li>需求并没有被理解透彻，或者出于其他理由你认为它是不稳定的</li>
+<li>设计很复杂，或者很有挑战性</li>
+<li>开发团队对应用领域不太熟悉</li>
+<li>项目包含许多风险</li>
+<li>“长期可预测性”不重要</li>
+<li>后期改变需求、设计和编码的代码成本较低</li>
+</ul>
+<h3 id="问题定义"><a href="#问题定义" class="headerlink" title="问题定义"></a>问题定义</h3><p>问题定义应该用客户的语言来书写，而且应该从客户的角度来描述问题（通常图表是比较好的表达方式）<br>如果没有一个良好的问题定义，你努力解决的可能是一个错误的问题</p>
+<h3 id="需求（需求分析）"><a href="#需求（需求分析）" class="headerlink" title="需求（需求分析）"></a>需求（需求分析）</h3><p>明确的需求有助于确保是用户（而不是程序员）驾驭系统的功能，免得去猜测用户想要的是什么<br>稳定的需求是软件开发的圣杯（几乎不可能），需要采取一些步骤来使需求变更的负面影响最小化</p>
+<h4 id="在构建期间处理需求变更"><a href="#在构建期间处理需求变更" class="headerlink" title="在构建期间处理需求变更"></a>在构建期间处理需求变更</h4><ul>
+<li>使用需求核对表来评估你的需求质量</li>
+<li>确保每一个人知道需求变更的成本</li>
+<li>建立一套变更控制程序</li>
+<li>使用能适应变更的开发方法</li>
+<li>放弃这个项目</li>
+<li>注意项目的商业案例</li>
+</ul>
+<h3 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h3><p>架构应该描述主要决策的动机，优秀的软件架构很大程度与机器和编程语言无关；架构应该处理所有的需求，不包含不必要的元素；应该指出风险点</p>
+<h4 id="架构的组成成分"><a href="#架构的组成成分" class="headerlink" title="架构的组成成分"></a>架构的组成成分</h4><ul>
+<li>程序组织（定义程序的主要构造块，定义各个构造块的责任）</li>
+<li>主要类（二八原则，对核心类进行详细说明）</li>
+<li>数据设计（主要文件和数据表的设计，说明选择理由）</li>
+<li>业务规则（如果架构依赖与特定业务规则，详细说明）</li>
+<li>用户界面设计</li>
+<li>资源管理（稀缺资源的计划）</li>
+<li>安全性（加密、错误消息的细致程度等）</li>
+<li>性能（如果关注性能，制定性能目标）</li>
+<li>可伸缩性</li>
+<li>互用性</li>
+<li>国际化/本地化 </li>
+<li>输入输出</li>
+<li>错误处理</li>
+<li>容错性</li>
+<li>架构可行性（必须在全面开展构建之前解决掉风险）</li>
+<li>过度工程（链条强度等于所有薄弱环节的乘积）</li>
+<li>关于买还是造的决策（如果不采用现货供应的组件，应该说明自己定制的组件应该在哪方面胜过现有的程序库）</li>
+<li>关于复用的决策</li>
+<li>变更策略</li>
+</ul>
+<h2 id="关键的构建决策"><a href="#关键的构建决策" class="headerlink" title="关键的构建决策"></a>关键的构建决策</h2><h3 id="选择合适的编程语言"><a href="#选择合适的编程语言" class="headerlink" title="选择合适的编程语言"></a>选择合适的编程语言</h3><p>好的语言可以让你从非必要的工作中解放出来，集中精力去对付更高级的问题</p>
+<h3 id="编程约定"><a href="#编程约定" class="headerlink" title="编程约定"></a>编程约定</h3><p>成功的编程的一个关键就在于避免随意地变化，专注与那些真正需要的变化</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2018/12/08/代码大全摘要-高质量代码/" class="prev">PREV</a><a href="/2018/09/16/dubbo服务消费端源码浅读/" class="next">NEXT</a></div><div class="copyright"><p>© 2015 - 2018 <a href="http://chuninsane.github.io">zhanggliangg</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>

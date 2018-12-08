@@ -1,0 +1,99 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 代码大全摘要-软件工艺 · chuninsane</title><meta name="description" content="代码大全摘要-软件工艺 - zhanggliangg"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://chuninsane.github.io/atom.xml" title="chuninsane"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/chuninsane" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">代码大全摘要-软件工艺</h1><div class="post-info">Dec 8, 2018</div><div class="post-content"><h2 id="自说明代码"><a href="#自说明代码" class="headerlink" title="自说明代码"></a>自说明代码</h2><h3 id="外部文档"><a href="#外部文档" class="headerlink" title="外部文档"></a>外部文档</h3><h4 id="单元开发文件夹"><a href="#单元开发文件夹" class="headerlink" title="单元开发文件夹"></a>单元开发文件夹</h4><p>是一种非正式文档，其中包含了供开发者在编译期间使用的记录</p>
+<h4 id="详细设计文档"><a href="#详细设计文档" class="headerlink" title="详细设计文档"></a>详细设计文档</h4><p>描述在类层或子程序层的设计决定，包括曾经考虑的方案，以及采用所选方案的理由</p>
+<h3 id="编程风格作为文档"><a href="#编程风格作为文档" class="headerlink" title="编程风格作为文档"></a>编程风格作为文档</h3><p>在代码层文档中起主要作用的因素并非注释，而是好的编程风格</p>
+<h3 id="注释或不注释"><a href="#注释或不注释" class="headerlink" title="注释或不注释"></a>注释或不注释</h3><p>注释写得糟糕很容易，写得很出色却难了。写注释能让你更好地思考代码在干什么，如果注释困难，那么很可能表示代码写得比较差劲</p>
+<h3 id="高效注释的关键"><a href="#高效注释的关键" class="headerlink" title="高效注释的关键"></a>高效注释的关键</h3><h4 id="注释种类"><a href="#注释种类" class="headerlink" title="注释种类"></a>注释种类</h4><blockquote>
+<ul>
+<li>重复代码（把代码用文字翻译了一遍，徒增阅读量）</li>
+<li>解释代码（通常正式因为代码含糊不清，才体现出这类注释的价值）</li>
+<li>代码标记（定位缺陷代码，需要有统一的规范）</li>
+<li>概述代码（若干行代码的意思用一两句话表达出来，可以加快代码的阅读速度）</li>
+<li>代码意图说明（指出需要解决的问题，而非方法）</li>
+<li>传达代码无法表述的信息（版权、版本号等）</li>
+</ul>
+</blockquote>
+<h4 id="高效注释"><a href="#高效注释" class="headerlink" title="高效注释"></a>高效注释</h4><blockquote>
+<ul>
+<li>采用不会打断或抑制修改的注释风格</li>
+<li>用伪代码编程减少注释时间（先写伪代码作为注释，然后写代码）</li>
+<li>把注释集成到你的开发风格中</li>
+<li>性能不是逃避注释的好借口</li>
+</ul>
+</blockquote>
+<h4 id="最佳注释量"><a href="#最佳注释量" class="headerlink" title="最佳注释量"></a>最佳注释量</h4><p>没有强制性要求，如果注释说明了写代码的来由，没有违背高效注释的原则，这样的注释就是足够的</p>
+<h3 id="注释技术"><a href="#注释技术" class="headerlink" title="注释技术"></a>注释技术</h3><blockquote>
+<ul>
+<li>不要随意添加无关注释（特别是自己胡乱抽象的）</li>
+<li>尽量不要使用行尾注释</li>
+<li>注释应表达代码的意图</li>
+<li>代码本身应尽力做好说明</li>
+<li>注释代码时应该注重“为何做”而不是“怎么做”</li>
+<li>用注释为后面的内容做铺垫</li>
+<li>说明非常规操作（有骚操作为了特殊的目的，需要注释说明）</li>
+<li>注释尽量别用缩略语</li>
+<li>将主次注释区别开</li>
+<li>错误或语言环境独特点要加注释</li>
+<li>如果违背良好编程风格给出理由</li>
+</ul>
+</blockquote>
+<h4 id="注释数据说明"><a href="#注释数据说明" class="headerlink" title="注释数据说明"></a>注释数据说明</h4><ul>
+<li>注释数值单位</li>
+<li>对数值的允许范围给出注释</li>
+<li>注释编码含义</li>
+<li>注释对输入数据的限制</li>
+<li>将与变量有关的注释通过变量名关联起来</li>
+<li>注释全局数据</li>
+</ul>
+<h4 id="注释控制结构"><a href="#注释控制结构" class="headerlink" title="注释控制结构"></a>注释控制结构</h4><ul>
+<li>在每个if、case、循环或者代码段前面加上注释</li>
+<li>应在每个控制结构后加上注释（说明结果如何，一般说明代码太过复杂）</li>
+</ul>
+<h4 id="注释子程序"><a href="#注释子程序" class="headerlink" title="注释子程序"></a>注释子程序</h4><ul>
+<li>注释应靠近其说明的代码</li>
+<li>在子程序上部用一两句话说明（不要喧兵夺主）</li>
+<li>在声明参数处注释这些参数</li>
+<li>利用代码说明工具（比如javadoc）</li>
+<li>分清输入与输出</li>
+<li>注释接口假设（比如是否为空、是否为排过序的数组等）</li>
+<li>对子程序的局限性作解释（比如精度、延时时间等）</li>
+<li>说明子程序的全局效果</li>
+<li>记录所用算法的来源</li>
+<li>用注释标记程序的各部分</li>
+</ul>
+<h4 id="标注类的一般原则"><a href="#标注类的一般原则" class="headerlink" title="标注类的一般原则"></a>标注类的一般原则</h4><ul>
+<li>说明该类的设计方法</li>
+<li>说明局限性、用法假设等</li>
+<li>注释类接口</li>
+<li>不要在类接口处说明实现细节（违反封装原则）</li>
+</ul>
+<h4 id="注释文件的一般原则"><a href="#注释文件的一般原则" class="headerlink" title="注释文件的一般原则"></a>注释文件的一般原则</h4><ul>
+<li>说明各文件的意图和内容</li>
+<li>将姓名、电子邮件以及电话号码放到注释块中</li>
+<li>包含版本控制标记</li>
+<li>注释块中包含法律通告</li>
+<li>将文件命名为其内容相关的名字</li>
+</ul>
+<h2 id="软件工艺的话题"><a href="#软件工艺的话题" class="headerlink" title="软件工艺的话题"></a>软件工艺的话题</h2><h3 id="征服复杂性"><a href="#征服复杂性" class="headerlink" title="征服复杂性"></a>征服复杂性</h3><blockquote>
+<ul>
+<li>在架构层将系统划分为多个子系统</li>
+<li>仔细定义类接口</li>
+<li>保证类接口的抽象性</li>
+<li>避免全局变量</li>
+<li>避免深层次的继承（耗费大量精力）</li>
+<li>避免深层次的循环或条件判断</li>
+<li>别用goto</li>
+<li>小心定义错误处理方法</li>
+<li>以系统的观点对待内置的异常机制</li>
+<li>不要让类过度膨胀</li>
+<li>子层序应该保持短小</li>
+<li>使用清楚、不言自明的变量名</li>
+<li>传递给子程序的参数应尽量少</li>
+<li>用规范和约定来使大脑解脱</li>
+</ul>
+</blockquote>
+<h3 id="精选开发过程"><a href="#精选开发过程" class="headerlink" title="精选开发过程"></a>精选开发过程</h3><p>软件开发是创造性的活动，如果不理解这一创造性的过程，就无法利用最主要的生产工具“大脑”</p>
+<h3 id="首先为人写程序，其次才是为机器"><a href="#首先为人写程序，其次才是为机器" class="headerlink" title="首先为人写程序，其次才是为机器"></a>首先为人写程序，其次才是为机器</h3><p>可读性好的代码在以下方面有正面影响：可理解性、容易复查、错误率、调试、可修改性、开发时间、外在质量</p>
+<h3 id="深入一门语言去编程，不浮于表面"><a href="#深入一门语言去编程，不浮于表面" class="headerlink" title="深入一门语言去编程，不浮于表面"></a>深入一门语言去编程，不浮于表面</h3><p>不要将编程局限到所用语言能自动支持的范围，先考虑干什么，然后再去考虑用工具怎么去实现</p>
+<h3 id="借助规范集中注意力"><a href="#借助规范集中注意力" class="headerlink" title="借助规范集中注意力"></a>借助规范集中注意力</h3><p>规范是一种管理复杂度的工具</p>
+<h3 id="迭代，不断反复"><a href="#迭代，不断反复" class="headerlink" title="迭代，不断反复"></a>迭代，不断反复</h3><p>软件工程的诀窍在于，在早期开发阶段的迭代过程中，需要快速地构建尽量多的东西，之后丢弃也不会花费太多成本</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2018/12/08/代码大全摘要-系统考虑/" class="next">NEXT</a></div><div class="copyright"><p>© 2015 - 2018 <a href="http://chuninsane.github.io">zhanggliangg</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 代码大全摘要-高质量代码 · chuninsane</title><meta name="description" content="代码大全摘要-高质量代码 - zhanggliangg"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://chuninsane.github.io/atom.xml" title="chuninsane"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/chuninsane" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">代码大全摘要-高质量代码</h1><div class="post-info">Dec 8, 2018</div><div class="post-content"><h2 id="构建中的设计"><a href="#构建中的设计" class="headerlink" title="构建中的设计"></a>构建中的设计</h2><h3 id="设计中的挑战"><a href="#设计中的挑战" class="headerlink" title="设计中的挑战"></a>设计中的挑战</h3><blockquote>
+<ul>
+<li>设计是个险恶的问题（把问题解决一遍能够明确定义它，然后再次解决它）</li>
+<li>设计是个了无章法的过程</li>
+<li>设计就是确定取舍和调整顺序的过程</li>
+<li>设计受到诸多限制</li>
+<li>设计是不确定的</li>
+<li>设计是一个启发式过程（过程中总会有试验和犯错误）</li>
+<li>设计是自然而然形成的</li>
+</ul>
+</blockquote>
+<h3 id="关键的设计概念"><a href="#关键的设计概念" class="headerlink" title="关键的设计概念"></a>关键的设计概念</h3><h4 id="管理复杂度"><a href="#管理复杂度" class="headerlink" title="管理复杂度"></a>管理复杂度</h4><ul>
+<li>把任何人在同一时间需要处理的本质复杂度的量减到最小</li>
+<li>不要让偶然性的复杂度无谓地快速增长</li>
+</ul>
+<h4 id="理想的设计特征"><a href="#理想的设计特征" class="headerlink" title="理想的设计特征"></a>理想的设计特征</h4><ul>
+<li>最小的复杂度</li>
+<li>易于维护</li>
+<li>松散耦合</li>
+<li>可扩展性</li>
+<li>可重用性</li>
+<li>高扇入</li>
+<li>低扇出</li>
+<li>可移植性</li>
+<li>精简性</li>
+<li>层次性</li>
+<li>标准技术</li>
+</ul>
+<h4 id="设计的层次"><a href="#设计的层次" class="headerlink" title="设计的层次"></a>设计的层次</h4><p>软件系统 -&gt; 子系统和包 -&gt; 包中的类 -&gt; 类中的数据和子程序 -&gt; 子程序内部<br>（子系统依赖关系应该是有向无环图）</p>
+<h3 id="设计构造块（启发式方法）"><a href="#设计构造块（启发式方法）" class="headerlink" title="设计构造块（启发式方法）"></a>设计构造块（启发式方法）</h3><h4 id="形成一致的抽象"><a href="#形成一致的抽象" class="headerlink" title="形成一致的抽象"></a>形成一致的抽象</h4><p>抽象是能让你在关注某一概念的同时可以放心忽略其中一些细节</p>
+<h4 id="封装实现细节"><a href="#封装实现细节" class="headerlink" title="封装实现细节"></a>封装实现细节</h4><p>封装帮助你管理复杂度的方法是不让你看到那些复杂度</p>
+<h4 id="信息隐藏"><a href="#信息隐藏" class="headerlink" title="信息隐藏"></a>信息隐藏</h4><p>隐藏起来的可能是某个易变的区域，在这个区域中发生的错误不会给程序其余部分带来太大损失<br>对系统非重大的改动可能只会影响到某个类中的几个子程序</p>
+<h4 id="秘密分为两类"><a href="#秘密分为两类" class="headerlink" title="秘密分为两类"></a>秘密分为两类</h4><ul>
+<li>隐藏复杂度，这样你就不用再去关注他</li>
+<li>隐藏变化源，发生变化时，其影响就能被限制在局部范围内</li>
+</ul>
+<h4 id="信息隐藏的障碍"><a href="#信息隐藏的障碍" class="headerlink" title="信息隐藏的障碍"></a>信息隐藏的障碍</h4><ul>
+<li>信息过度分散</li>
+<li>循环依赖（无法单独测试）</li>
+<li>类内数据误认为全局数据</li>
+<li>可以察觉的性能损耗</li>
+</ul>
+<h4 id="找出容易改变的区域"><a href="#找出容易改变的区域" class="headerlink" title="找出容易改变的区域"></a>找出容易改变的区域</h4><ul>
+<li>业务规则</li>
+<li>对硬件的依赖性</li>
+<li>输入和输出</li>
+<li>非标准的语言特性</li>
+<li>困难的设计区域和构建区域</li>
+<li>状态变量</li>
+<li>数据量的限制</li>
+</ul>
+<h4 id="查阅常用的设计模式"><a href="#查阅常用的设计模式" class="headerlink" title="查阅常用的设计模式"></a>查阅常用的设计模式</h4><p>设计模式集成了众多现成的解决方案</p>
+<h4 id="使用设计模式的优势"><a href="#使用设计模式的优势" class="headerlink" title="使用设计模式的优势"></a>使用设计模式的优势</h4><ul>
+<li>设计模式通过提供现成的抽象来减少复杂度</li>
+<li>把常见解决方案的细节予以制度化来减少出错</li>
+<li>提供多种设计方案而带来启发性的价值</li>
+<li>简化交流</li>
+</ul>
+<h4 id="其他的启发式方法"><a href="#其他的启发式方法" class="headerlink" title="其他的启发式方法"></a>其他的启发式方法</h4><ul>
+<li>高内聚性</li>
+<li>构造分层结构</li>
+<li>严格描述类契约</li>
+<li>分配职责</li>
+<li>为测试而设计</li>
+<li>避免失误</li>
+<li>有意识地选择绑定时间</li>
+<li>创建中央控制点</li>
+<li>考虑使用蛮力突破</li>
+<li>画一个图（一图顶千语）</li>
+<li>保持设计的模块化</li>
+</ul>
+<h3 id="设计实践"><a href="#设计实践" class="headerlink" title="设计实践"></a>设计实践</h3><blockquote>
+<ul>
+<li>迭代 — 可以从高层次或低层次去审视问题，从不同角度</li>
+<li>分治法 — 把程序分解为不同的关注区域，然后分别解决每一个区域</li>
+<li>自上而下 — 从一般性问题出发，把问题分解成可控的部分，一种分解策略</li>
+<li>自下而上 — 从可控的部分出发，去构造一个通用的方案，一种合成策略</li>
+<li>建立试验性原型</li>
+<li>合作设计</li>
+</ul>
+</blockquote>
+<h4 id="要做多少设计才够"><a href="#要做多少设计才够" class="headerlink" title="要做多少设计才够"></a>要做多少设计才够</h4><p>最大的设计问题来自于那些误认为很简单的，而没有做出足够设计的区域</p>
+<h4 id="记录你的设计成果（适用于小型项目）"><a href="#记录你的设计成果（适用于小型项目）" class="headerlink" title="记录你的设计成果（适用于小型项目）"></a>记录你的设计成果（适用于小型项目）</h4><ul>
+<li>把设计文档插入到代码中</li>
+<li>用wiki来记录设计讨论和决策</li>
+<li>写总结邮件</li>
+<li>使用照片方式记录白板</li>
+<li>在适当的细节层创建uml图</li>
+</ul>
+<h2 id="可以工作的类"><a href="#可以工作的类" class="headerlink" title="可以工作的类"></a>可以工作的类</h2><h3 id="ADT（抽象数据类型）"><a href="#ADT（抽象数据类型）" class="headerlink" title="ADT（抽象数据类型）"></a>ADT（抽象数据类型）</h3><p>一些数据及对这些数据所进行的操作集合</p>
+<h4 id="使用ADT的益处"><a href="#使用ADT的益处" class="headerlink" title="使用ADT的益处"></a>使用ADT的益处</h4><ul>
+<li>可以隐藏实现细节</li>
+<li>改动不会影响到整个程序，也是细节隐藏的好处</li>
+<li>让接口能提供更多信息</li>
+<li>更容易提高性能</li>
+<li>让程序的正确性更显而易见</li>
+<li>程序更具有自我说明性</li>
+<li>无须在程序内到处传递数据</li>
+<li>你可以像在现实世界中那样操作实体</li>
+</ul>
+<h4 id="ADT示例"><a href="#ADT示例" class="headerlink" title="ADT示例"></a>ADT示例</h4><ul>
+<li>把底层的数据结构包装成ADT</li>
+<li>把像文件这样的常用对象当成ADT</li>
+<li>简单的事物也当成ADT</li>
+<li>不要让ADT依赖与存储介质</li>
+</ul>
+<p>ADT构成了类这一概念的基础，加上了继承和多态</p>
+<h3 id="良好的类接口"><a href="#良好的类接口" class="headerlink" title="良好的类接口"></a>良好的类接口</h3><h4 id="好的抽象"><a href="#好的抽象" class="headerlink" title="好的抽象"></a>好的抽象</h4><ul>
+<li>类的接口应该展现一致的抽象层次（四不像的东西需要重新设计）</li>
+<li>一定要理解类所实现的抽象是什么</li>
+<li>提供成对的服务（符合自然常识）</li>
+<li>把不相关的信息转移到其他类中</li>
+<li>尽可能让接口可编程，而不是表达语义</li>
+<li>防止在修改时破坏接口的抽象</li>
+<li>不要添加与接口抽象不一致的公用成员</li>
+<li>同时考虑抽象性和内聚性</li>
+</ul>
+<h4 id="良好的封装"><a href="#良好的封装" class="headerlink" title="良好的封装"></a>良好的封装</h4><ul>
+<li>尽可能地限制类和成员的可访问性</li>
+<li>不要公开暴露成员数据</li>
+<li>避免把私用的实现细节放入类的接口中（不要暴露细节）</li>
+<li>不要对类的使用者做出任何假设</li>
+<li>让阅读代码比编写代码更方便</li>
+<li>要格外警惕从语义上破坏封装性</li>
+<li>留意过于紧密的耦合关系</li>
+</ul>
+<h3 id="有关设计与实现"><a href="#有关设计与实现" class="headerlink" title="有关设计与实现"></a>有关设计与实现</h3><h4 id="包含关系（“有一个”的关系）"><a href="#包含关系（“有一个”的关系）" class="headerlink" title="包含关系（“有一个”的关系）"></a>包含关系（“有一个”的关系）</h4><ul>
+<li>优先考虑使用包含，万不得已时使用继承</li>
+<li>警惕数据成员超过7个数据成员的类</li>
+</ul>
+<h4 id="继承关系（“是一个”的关系）"><a href="#继承关系（“是一个”的关系）" class="headerlink" title="继承关系（“是一个”的关系）"></a>继承关系（“是一个”的关系）</h4><ul>
+<li>确保只继承需要继承的部分</li>
+<li>不要覆盖一个不可覆盖的成员函数</li>
+<li>把共用的接口、数据及操作放到继承树尽可能高的位置</li>
+<li>只有一个实例的类是值得怀疑的</li>
+<li>只有一个派生类的基类也是值得怀疑的 — 过度设计</li>
+<li>派生覆盖某个子程序后，在其中没做任何操作，这种情况也是值得怀疑的 — 改变语义</li>
+<li>避免让继承体系过深 — 管理复杂度</li>
+<li>尽量使用多态，避免大量的类型检查</li>
+<li>让所有数据都是private（拥有最强的可控性）</li>
+</ul>
+<h4 id="包含与继承的选择"><a href="#包含与继承的选择" class="headerlink" title="包含与继承的选择"></a>包含与继承的选择</h4><ul>
+<li>如果多个类共享数据而非行为，应该创建这些类可以包含的共用对象</li>
+<li>如果多个类共享行为而非数据，应该让它们从共同的基类继承而来，并在基类中定义共用的子程序</li>
+<li>如果多个类共享行为也共享数据，应该让它们从共同的基类继承而来，并在基类中定义共用的子程序和数据</li>
+<li>当你想基类控制接口时，使用继承；自己控制接口时使用包含</li>
+</ul>
+<h4 id="成员函数与数据成员"><a href="#成员函数与数据成员" class="headerlink" title="成员函数与数据成员"></a>成员函数与数据成员</h4><ul>
+<li>让类中子程序的数量尽可能少</li>
+<li>禁止隐式地产生你不需要的成员函数与运算符</li>
+<li>减少类所调用的不同子程序的数量</li>
+<li>对其他类的子程序的间接调用要尽可能少</li>
+<li>一般来说，应尽量减少类和类之间相互合作的范围</li>
+</ul>
+<h4 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h4><ul>
+<li>如果可能，应该在所有的构造函数中初始化所有的数据成员</li>
+<li>用私用构造函数来强制实现单例</li>
+<li>优先深拷贝，除非论证可行才采用浅拷贝</li>
+</ul>
+<h3 id="创建类的原因"><a href="#创建类的原因" class="headerlink" title="创建类的原因"></a>创建类的原因</h3><blockquote>
+<ul>
+<li>为现实世界中的对象建模</li>
+<li>为抽象的对象建模</li>
+<li>降低复杂性</li>
+<li>隔离复杂度</li>
+<li>隐藏实现细节</li>
+<li>限制变动的范围</li>
+<li>隐藏全局数据</li>
+<li>让参数传递更顺畅</li>
+<li>建立中心控制点</li>
+<li>让代码更易于重用</li>
+<li>把相关操作包装到一起</li>
+<li>实现某种特定的重构</li>
+</ul>
+</blockquote>
+<h4 id="应该避免的类"><a href="#应该避免的类" class="headerlink" title="应该避免的类"></a>应该避免的类</h4><ul>
+<li>避免创建万能类</li>
+<li>消除无关紧要的类</li>
+<li>避免用动词命名的类</li>
+</ul>
+<h2 id="高质量的子程序"><a href="#高质量的子程序" class="headerlink" title="高质量的子程序"></a>高质量的子程序</h2><h3 id="创建子程序的正当理由"><a href="#创建子程序的正当理由" class="headerlink" title="创建子程序的正当理由"></a>创建子程序的正当理由</h3><blockquote>
+<ul>
+<li>降低复杂度</li>
+<li>引入中间、易懂的抽象</li>
+<li>避免代码重复</li>
+<li>支持子类化</li>
+<li>隐藏顺序</li>
+<li>提高可移植性</li>
+<li>简化复杂的布尔判断</li>
+<li>降低性能优化成本</li>
+</ul>
+</blockquote>
+<h3 id="好的子程序名字"><a href="#好的子程序名字" class="headerlink" title="好的子程序名字"></a>好的子程序名字</h3><blockquote>
+<ul>
+<li>描述子程序所做的所有事情</li>
+<li>避免使用无意义的、模糊或表达不清的动词</li>
+<li>不要仅通过数字来形成不同的子程序名字</li>
+<li>根据需要确定子程序名字的长度</li>
+<li>给函数命名时要对返回值有所描述</li>
+<li>给过程起名时使用强烈语气的动词加宾语的形式</li>
+<li>准确使用对仗词</li>
+<li>为常用操作确定命名规范</li>
+</ul>
+</blockquote>
+<h3 id="子程序可以写多长"><a href="#子程序可以写多长" class="headerlink" title="子程序可以写多长"></a>子程序可以写多长</h3><p>建议不要超过200行，长度过长会影响子程序的可读性</p>
+<h3 id="如何使用子程序参数"><a href="#如何使用子程序参数" class="headerlink" title="如何使用子程序参数"></a>如何使用子程序参数</h3><blockquote>
+<ul>
+<li>按照输入-修改-输出的顺序排列参数</li>
+<li>使用所有的参数</li>
+<li>把状态或者出错变量放在最后</li>
+<li>不要把子程序的参数用做工作变量</li>
+<li>在接口中对参数的假定加以说明</li>
+<li>参数个数限制在7个之内</li>
+<li>确保实际参数与形式参数相匹配</li>
+</ul>
+</blockquote>
+<h3 id="使用函数时需要考虑的问题"><a href="#使用函数时需要考虑的问题" class="headerlink" title="使用函数时需要考虑的问题"></a>使用函数时需要考虑的问题</h3><h4 id="何时使用函数，何时使用过程"><a href="#何时使用函数，何时使用过程" class="headerlink" title="何时使用函数，何时使用过程"></a>何时使用函数，何时使用过程</h4><p>如果一个子程序主要用途返回其名字所指明的返回值，那么就应用使用函数，否则使用过程</p>
+<h4 id="设置函数的返回值"><a href="#设置函数的返回值" class="headerlink" title="设置函数的返回值"></a>设置函数的返回值</h4><ul>
+<li>检查所有可能的返回路径</li>
+<li>不要返回指向局部数据的引用和指针</li>
+</ul>
+<h2 id="防御式编程"><a href="#防御式编程" class="headerlink" title="防御式编程"></a>防御式编程</h2><h3 id="保护程序免遭非法输入数据的破坏"><a href="#保护程序免遭非法输入数据的破坏" class="headerlink" title="保护程序免遭非法输入数据的破坏"></a>保护程序免遭非法输入数据的破坏</h3><blockquote>
+<ul>
+<li>检查所有来源于外部的数据值</li>
+<li>检查子程序所有输入参数的值</li>
+<li>决定如何处理错误的输入数据</li>
+</ul>
+</blockquote>
+<h3 id="断言"><a href="#断言" class="headerlink" title="断言"></a>断言</h3><p>开发期间使用的，让程序在运行时进行自检的代码</p>
+<h4 id="使用断言的指导建议"><a href="#使用断言的指导建议" class="headerlink" title="使用断言的指导建议"></a>使用断言的指导建议</h4><ul>
+<li>用错误处理代码来处理预期会发生的状况，用断言处理绝对不应该发生的状况</li>
+<li>避免把需要执行的代码放到断言中</li>
+<li>用断言来注解并验证前条件和后条件</li>
+<li>对于高健壮性的代码，先处理断言再处理错误</li>
+</ul>
+<h3 id="错误处理技术"><a href="#错误处理技术" class="headerlink" title="错误处理技术"></a>错误处理技术</h3><blockquote>
+<ul>
+<li>返回中立值</li>
+<li>换用下一个正确的数据</li>
+<li>返回与前次相同的数据</li>
+<li>返回最接近的合法值</li>
+<li>把错误信息记录到日志文件中</li>
+<li>返回一个错误码</li>
+<li>调用错误处理子程序或对象</li>
+<li>当错误发生时显示错误信息</li>
+<li>关闭程序</li>
+</ul>
+</blockquote>
+<h4 id="健壮性与正确性"><a href="#健壮性与正确性" class="headerlink" title="健壮性与正确性"></a>健壮性与正确性</h4><ul>
+<li>正确性意味永不返回不准确的结果</li>
+<li>人身安全攸关的软件：倾向于正确性而非健壮性</li>
+<li>消费类应用软件：更注重健壮性而非正确性</li>
+</ul>
+<h4 id="高层次设计对错误处理方式的影响"><a href="#高层次设计对错误处理方式的影响" class="headerlink" title="高层次设计对错误处理方式的影响"></a>高层次设计对错误处理方式的影响</h4><ul>
+<li>确定一种通用的处理错误参数的方法</li>
+<li>确定好方法后确保始终如一地贯彻这一方法</li>
+</ul>
+<h3 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h3><p>异常是把代码中的错误和异常事件传递给调用方的一种手段</p>
+<h4 id="异常使用建议"><a href="#异常使用建议" class="headerlink" title="异常使用建议"></a>异常使用建议</h4><ul>
+<li>用异常通知程序的其他部分，发生了不可忽略的错误</li>
+<li>只有真正例外的情况才会抛出异常</li>
+<li>不能用异常来推卸责任（可以在局部处理就应该处理掉它）</li>
+<li>在恰当的抽象层次抛出异常</li>
+<li>避免使用空的catch语句</li>
+<li>考虑所用函数库可能抛出的异常</li>
+<li>考虑创建一个集中的异常报告机制</li>
+<li>把项目中的异常的使用标准化</li>
+</ul>
+<h3 id="隔离程序（一种容错策略）"><a href="#隔离程序（一种容错策略）" class="headerlink" title="隔离程序（一种容错策略）"></a>隔离程序（一种容错策略）</h3><p>在输入数据时将其转换为恰当的类型</p>
+<h4 id="隔离与断言的关系"><a href="#隔离与断言的关系" class="headerlink" title="隔离与断言的关系"></a>隔离与断言的关系</h4><p>隔栏外部的程序应该使用错误处理技术，在隔离内部的程序应该使用断言技术</p>
+<h3 id="辅助调试的代码"><a href="#辅助调试的代码" class="headerlink" title="辅助调试的代码"></a>辅助调试的代码</h3><p>在开发期间牺牲一些速度和对资源的使用，来换取一些可以让开发更顺畅的内置工具</p>
+<h4 id="应尽早引入辅助调试的代码"><a href="#应尽早引入辅助调试的代码" class="headerlink" title="应尽早引入辅助调试的代码"></a>应尽早引入辅助调试的代码</h4><p>对你的帮助最大化</p>
+<h4 id="采用进攻式编程（有时候最好的防守正是大胆的进攻）"><a href="#采用进攻式编程（有时候最好的防守正是大胆的进攻）" class="headerlink" title="采用进攻式编程（有时候最好的防守正是大胆的进攻）"></a>采用进攻式编程（有时候最好的防守正是大胆的进攻）</h4><ul>
+<li>让问题引起的麻烦越大越好，避免忽略问题</li>
+<li>完全填充分配到的内存</li>
+<li>完全填充已分配到的所有文件或流</li>
+<li>确保每个case语句中的default能产生严重错误，避免忽略</li>
+<li>删除一个对象时把它填满垃圾数据</li>
+</ul>
+<h3 id="确定在产品代码中该保留多少防御代码"><a href="#确定在产品代码中该保留多少防御代码" class="headerlink" title="确定在产品代码中该保留多少防御代码"></a>确定在产品代码中该保留多少防御代码</h3><blockquote>
+<ul>
+<li>保留那些检查重要错误的代码</li>
+<li>去掉检查细微错误的代码</li>
+<li>去掉可以导致程序硬性崩溃的代码</li>
+<li>保留可以让程序稳妥地崩溃的代码</li>
+<li>为你的技术支持人员记录错误信息</li>
+<li>确认留在代码中的错误信息是友好的</li>
+</ul>
+</blockquote>
+<h3 id="对防御式编程采取防御的姿态"><a href="#对防御式编程采取防御的姿态" class="headerlink" title="对防御式编程采取防御的姿态"></a>对防御式编程采取防御的姿态</h3><p>过度防御会导致代码臃肿与性能下降，因地制宜的调整你进行防御式编程的优先级</p>
+<h2 id="伪代码编程过程"><a href="#伪代码编程过程" class="headerlink" title="伪代码编程过程"></a>伪代码编程过程</h2><h3 id="创建类和子程序的步骤概述"><a href="#创建类和子程序的步骤概述" class="headerlink" title="创建类和子程序的步骤概述"></a>创建类和子程序的步骤概述</h3><p>创建一个类一般而言是一个迭代过程</p>
+<h4 id="创建一个类的步骤"><a href="#创建一个类的步骤" class="headerlink" title="创建一个类的步骤"></a>创建一个类的步骤</h4><ul>
+<li>创建类的总体设计（定义类的职责，精确定义类的抽象概念，指出这个类中关键的公用方法，标识出重要的数据成员）</li>
+<li>创建类中的子程序</li>
+<li>复查并测试整个类</li>
+</ul>
+<h4 id="创建子程序的步骤"><a href="#创建子程序的步骤" class="headerlink" title="创建子程序的步骤"></a>创建子程序的步骤</h4><ul>
+<li>设计子程序</li>
+<li>检查设计</li>
+<li>编写子程序的代码</li>
+<li>检查代码</li>
+</ul>
+<h3 id="通过伪代码创造子程序"><a href="#通过伪代码创造子程序" class="headerlink" title="通过伪代码创造子程序"></a>通过伪代码创造子程序</h3><h4 id="设计子程序"><a href="#设计子程序" class="headerlink" title="设计子程序"></a>设计子程序</h4><ul>
+<li>检查先决条件（是否与整体设计匹配，是否真正需要）</li>
+<li>定义子程序需要解决的问题（需要隐藏的信息、传给子程序的输入、输出、前置条件、后置条件）</li>
+<li>为子程序命名（清晰无歧义）</li>
+<li>决定如何测试子程序</li>
+<li>在标准库中搜索可用的功能（重用好代码）</li>
+<li>考虑错误处理</li>
+<li>考虑效率问题</li>
+<li>研究算法与数据结构</li>
+<li>编写伪代码</li>
+<li>考虑数据</li>
+<li>检查伪代码</li>
+<li>在伪代码中试验一些想法，留下最好的想法</li>
+</ul>
+<h4 id="编写子程序"><a href="#编写子程序" class="headerlink" title="编写子程序"></a>编写子程序</h4><ul>
+<li>写出子程序的声明</li>
+<li>将伪代码转换为更高级别的注释</li>
+<li>每条注释下面填充代码</li>
+</ul>
+<h4 id="检查子程序"><a href="#检查子程序" class="headerlink" title="检查子程序"></a>检查子程序</h4><ul>
+<li>编译子程序</li>
+<li>测试子程序</li>
+<li>消除代码中的错误</li>
+</ul>
+<h4 id="收尾工作"><a href="#收尾工作" class="headerlink" title="收尾工作"></a>收尾工作</h4><ul>
+<li>检查设计质量</li>
+<li>检查子程序的变量</li>
+<li>语句和逻辑</li>
+<li>代码风格</li>
+<li>子程序文档</li>
+<li>去除冗余注释</li>
+</ul>
+<h3 id="伪代码编程的代替方案"><a href="#伪代码编程的代替方案" class="headerlink" title="伪代码编程的代替方案"></a>伪代码编程的代替方案</h3><blockquote>
+<ul>
+<li>测试先行开发</li>
+<li>重构（不断重构，保持语气的前提下优化代码）</li>
+<li>契约式设计（前条件和后条件）</li>
+<li>东拼西凑（写出能够工作的代码）</li>
+</ul>
+</blockquote>
+</div></article></div></main><footer><div class="paginator"><a href="/2018/12/08/代码大全摘要-变量与语句/" class="prev">PREV</a><a href="/2018/12/08/代码大全摘要-打好基础/" class="next">NEXT</a></div><div class="copyright"><p>© 2015 - 2018 <a href="http://chuninsane.github.io">zhanggliangg</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>

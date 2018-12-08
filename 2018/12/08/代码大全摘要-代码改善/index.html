@@ -1,0 +1,314 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 代码大全摘要-代码改善 · chuninsane</title><meta name="description" content="代码大全摘要-代码改善 - zhanggliangg"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://chuninsane.github.io/atom.xml" title="chuninsane"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/chuninsane" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">代码大全摘要-代码改善</h1><div class="post-info">Dec 8, 2018</div><div class="post-content"><h2 id="软件质量概述"><a href="#软件质量概述" class="headerlink" title="软件质量概述"></a>软件质量概述</h2><h3 id="软件质量的特性"><a href="#软件质量的特性" class="headerlink" title="软件质量的特性"></a>软件质量的特性</h3><blockquote>
+<ul>
+<li>正确性</li>
+<li>可用性</li>
+<li>效率</li>
+<li>可靠性</li>
+<li>完整性</li>
+<li>适应性</li>
+<li>精确性</li>
+<li>健壮性</li>
+<li>可维护性</li>
+<li>灵活性</li>
+<li>可移植性</li>
+<li>可重用性</li>
+<li>可读性</li>
+<li>可测试性</li>
+<li>可理解性</li>
+</ul>
+</blockquote>
+<h3 id="改善软件质量的技术"><a href="#改善软件质量的技术" class="headerlink" title="改善软件质量的技术"></a>改善软件质量的技术</h3><blockquote>
+<ul>
+<li>软件质量目标（目标决定方向）</li>
+<li>明确定义质量保证工作</li>
+<li>测试策略（根据需求制定测试策略）</li>
+<li>软件工程指南</li>
+<li>非正式技术复查</li>
+<li>正式技术复查</li>
+<li>外部审查</li>
+</ul>
+</blockquote>
+<h4 id="开发过程"><a href="#开发过程" class="headerlink" title="开发过程"></a>开发过程</h4><ul>
+<li>对变更进行控制的过程（有效控制变更）</li>
+<li>结果的量化（结果无法量化，则完全不知道这个计划是否有实效）</li>
+<li>制作原型（能帮助完善设计，贴近用户的需求）</li>
+</ul>
+<h4 id="设置目标"><a href="#设置目标" class="headerlink" title="设置目标"></a>设置目标</h4><p>目标决定方向，没有方向也是瞎折腾</p>
+<h3 id="不同质量保障技术的相对效能"><a href="#不同质量保障技术的相对效能" class="headerlink" title="不同质量保障技术的相对效能"></a>不同质量保障技术的相对效能</h3><h4 id="推荐技术组合"><a href="#推荐技术组合" class="headerlink" title="推荐技术组合"></a>推荐技术组合</h4><ul>
+<li>对所有的需求、架构以及系统关键部分的设计进行正式检查</li>
+<li>建模或者创建原型</li>
+<li>代码阅读或检查</li>
+<li>执行测试</li>
+</ul>
+<h4 id="缺陷检测率"><a href="#缺陷检测率" class="headerlink" title="缺陷检测率"></a>缺陷检测率</h4><p>联合使用多种缺陷检测方法能获得更好的效果</p>
+<h4 id="找出缺陷的成本"><a href="#找出缺陷的成本" class="headerlink" title="找出缺陷的成本"></a>找出缺陷的成本</h4><p>大部分研究表明，检查比测试的成本更小</p>
+<h4 id="修正缺陷的成本"><a href="#修正缺陷的成本" class="headerlink" title="修正缺陷的成本"></a>修正缺陷的成本</h4><p>一个缺陷存在的时间越长，消除它的代价越高昂</p>
+<h3 id="什么时候进行质量保证工作"><a href="#什么时候进行质量保证工作" class="headerlink" title="什么时候进行质量保证工作"></a>什么时候进行质量保证工作</h3><p>缺陷可能在任何阶段渗入，需要在早期阶段就开始强调质量保证工作</p>
+<h3 id="软件质量的普遍原理"><a href="#软件质量的普遍原理" class="headerlink" title="软件质量的普遍原理"></a>软件质量的普遍原理</h3><p>改善质量以降低开发成本</p>
+<h2 id="协同构建"><a href="#协同构建" class="headerlink" title="协同构建"></a>协同构建</h2><p>展示你工作的过程正式化，以便把错误暴露出来</p>
+<h3 id="协同开发实践概要"><a href="#协同开发实践概要" class="headerlink" title="协同开发实践概要"></a>协同开发实践概要</h3><h4 id="协同构建是其他质量保障技术的补充"><a href="#协同构建是其他质量保障技术的补充" class="headerlink" title="协同构建是其他质量保障技术的补充"></a>协同构建是其他质量保障技术的补充</h4><p>首要目标就是改善软件的质量</p>
+<h4 id="协同构建有利于传授公司文化以及编程专业知识"><a href="#协同构建有利于传授公司文化以及编程专业知识" class="headerlink" title="协同构建有利于传授公司文化以及编程专业知识"></a>协同构建有利于传授公司文化以及编程专业知识</h4><p>复查都是培养新人以提高其代码质量的最好方式</p>
+<h4 id="构建前后都应保持协作"><a href="#构建前后都应保持协作" class="headerlink" title="构建前后都应保持协作"></a>构建前后都应保持协作</h4><h3 id="结对编程"><a href="#结对编程" class="headerlink" title="结对编程"></a>结对编程</h3><p>一位程序员敲代码，另一位注意有没有出现错误</p>
+<h4 id="成功运用结对编程的关键"><a href="#成功运用结对编程的关键" class="headerlink" title="成功运用结对编程的关键"></a>成功运用结对编程的关键</h4><ul>
+<li>用编码规范来支持结对编程（避免因规范导致的沟通成本花销）</li>
+<li>不要让结对编程编程旁观（不掌握键盘的也应该参与到编程中）</li>
+<li>不要强迫在简单的问题上使用结对编程</li>
+<li>有规律地对结对人员和分配的工作任务进行轮换</li>
+<li>鼓励双方跟上对方的步伐</li>
+<li>确认两个人都能看到显示器</li>
+<li>不要强迫程序员与自己关系紧张的人结对</li>
+<li>避免双新手组合</li>
+<li>指令一个组长（类似于集群中的leader，有些东西可以快速确定）</li>
+</ul>
+<h4 id="结对编程的好处"><a href="#结对编程的好处" class="headerlink" title="结对编程的好处"></a>结对编程的好处</h4><ul>
+<li>与单独开发相比，结对能够让人在压力下保持更好的状态</li>
+<li>能够改善代码质量</li>
+<li>能缩短进度时间表</li>
+<li>其他好处（传播公司文化、指令初级程序员、培养集体荣誉感）</li>
+</ul>
+<h3 id="正式检查"><a href="#正式检查" class="headerlink" title="正式检查"></a>正式检查</h3><h4 id="检查中的人员角色"><a href="#检查中的人员角色" class="headerlink" title="检查中的人员角色"></a>检查中的人员角色</h4><ul>
+<li>主持人（分派任务，预定会议室，报告详查结果，控制详查进度）</li>
+<li>作者（解释设计和代码中不清晰的部分）</li>
+<li>评论员（找出缺陷）</li>
+<li>记录员（记录会议中发现的缺陷以及指派的任务记录下来）</li>
+<li>经理（不需要参与会议，会让技术问题转换为行政问题，应准备一份详查报告给经理）</li>
+</ul>
+<h4 id="详查的一般步骤"><a href="#详查的一般步骤" class="headerlink" title="详查的一般步骤"></a>详查的一般步骤</h4><ul>
+<li>计划（作者将设计或者代码提交给主持人）</li>
+<li>概述（如果评论员不清楚项目背景，作者可以花费大约1小时来描述设计或者代码的技术背景）</li>
+<li>准备（每一个评论员独立地对设计或者代码进行详查）</li>
+<li>详查会议（挑选作者以外的其他人阐述设计或阅读代码，记录员记录错误，当确定是错误后应该停下来确定错误类型与严重程度）</li>
+<li>详查报告（会议结束后主持人要写出一份详细报告）</li>
+<li>返工（主持人将缺陷分配给某人来修复）</li>
+<li>跟进（主持人负责监督在详查过程中分配的返工任务）</li>
+<li>第三个小时的会议（会议期间不讨论所发现问题的解决方案，后会主持一个非正式的会议）</li>
+</ul>
+<h4 id="详查中的自尊心"><a href="#详查中的自尊心" class="headerlink" title="详查中的自尊心"></a>详查中的自尊心</h4><p>详查的目的是发现设计中的缺陷，而不是探索替代方案，更不应该是批评作者的设计或者代码</p>
+<h2 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h2><h3 id="调试概述"><a href="#调试概述" class="headerlink" title="调试概述"></a>调试概述</h3><h4 id="调试效率的巨大差异"><a href="#调试效率的巨大差异" class="headerlink" title="调试效率的巨大差异"></a>调试效率的巨大差异</h4><p>最好的程序员能够找出最多的错误，最快的找出错误，并且往往能够正确改正错误（软件开发有些方面鱼与熊掌可兼得）</p>
+<h4 id="让你有收获的缺陷"><a href="#让你有收获的缺陷" class="headerlink" title="让你有收获的缺陷"></a>让你有收获的缺陷</h4><ul>
+<li>理解你正在编写的程序</li>
+<li>明确你犯了那种错误</li>
+<li>从代码阅读者的角度分析代码质量</li>
+<li>审视自己解决问题的方法</li>
+<li>审视自己修正缺陷的方法</li>
+</ul>
+<h3 id="寻找缺陷"><a href="#寻找缺陷" class="headerlink" title="寻找缺陷"></a>寻找缺陷</h3><h4 id="科学的调试方法"><a href="#科学的调试方法" class="headerlink" title="科学的调试方法"></a>科学的调试方法</h4><ul>
+<li>将错误状态稳定下来</li>
+<li>确定错误的来源</li>
+<li>修补缺陷</li>
+<li>对所做修补的地方进行测试</li>
+<li>查找是否还有类似的错误</li>
+</ul>
+<h4 id="寻找缺陷的建议"><a href="#寻找缺陷的建议" class="headerlink" title="寻找缺陷的建议"></a>寻找缺陷的建议</h4><ul>
+<li>在构造假设时考虑所有的可用数据</li>
+<li>提炼产生错误的测试用例</li>
+<li>在自己的单元测试中测试代码</li>
+<li>利用可用的工具</li>
+<li>采用多种不同的方法重现错误</li>
+<li>用更多的数据生成更多的假设</li>
+<li>利用否定性测试用例的结果</li>
+<li>对可能的假设尝试头脑风暴</li>
+<li>在桌子上放一个记事本，把需要尝试的事情逐条列出</li>
+<li>逐渐排出，缩小嫌疑代码的范围</li>
+<li>对之前出现过缺陷的类和子程序保持警惕</li>
+<li>检查最近修改过的代码</li>
+<li>扩展嫌疑代码的范围</li>
+<li>增量式集成</li>
+<li>检查常见缺陷</li>
+<li>同其他人讨论</li>
+<li>抛开问题休息会</li>
+</ul>
+<h3 id="修正缺陷"><a href="#修正缺陷" class="headerlink" title="修正缺陷"></a>修正缺陷</h3><blockquote>
+<ul>
+<li>在动手之前务必先理解问题</li>
+<li>理解程序本身，而不仅仅问题</li>
+<li>验证对错误的分析</li>
+<li>放松一下</li>
+<li>保存最初的源代码</li>
+<li>治本而不是治标</li>
+<li>修改代码时一定要有恰当的理由</li>
+<li>一次只做一个改动</li>
+<li>检查自己的改动</li>
+<li>增加能暴露问题的单元测试</li>
+<li>搜索类似的缺陷</li>
+</ul>
+</blockquote>
+<h3 id="调试工具"><a href="#调试工具" class="headerlink" title="调试工具"></a>调试工具</h3><h4 id="源代码比较工具"><a href="#源代码比较工具" class="headerlink" title="源代码比较工具"></a>源代码比较工具</h4><p>如果修改了程序结果却出错了，diff此时会非常有用</p>
+<h4 id="编译器的警告消息"><a href="#编译器的警告消息" class="headerlink" title="编译器的警告消息"></a>编译器的警告消息</h4><ul>
+<li>将编译器的警告级别设置为最高级，尽可能不要放过任何一个警告</li>
+<li>用对待错误的态度来处理警告</li>
+<li>在项目范围内使用统一的编译设置（避免因为编译配置导致的问题）</li>
+</ul>
+<h4 id="增强语法检查和逻辑检查"><a href="#增强语法检查和逻辑检查" class="headerlink" title="增强语法检查和逻辑检查"></a>增强语法检查和逻辑检查</h4><p>可以使用语法检查工具进行进一步检查</p>
+<h4 id="执行性能剖析器"><a href="#执行性能剖析器" class="headerlink" title="执行性能剖析器"></a>执行性能剖析器</h4><p>能快速定位资源消耗的代码</p>
+<h4 id="测试框架"><a href="#测试框架" class="headerlink" title="测试框架"></a>测试框架</h4><p>对相应调试点开发测试代码</p>
+<h4 id="调试器"><a href="#调试器" class="headerlink" title="调试器"></a>调试器</h4><p>允许程序员对数据进行全面的检查，比较快速定位缺陷</p>
+<h2 id="重构"><a href="#重构" class="headerlink" title="重构"></a>重构</h2><h3 id="软件演化的类型"><a href="#软件演化的类型" class="headerlink" title="软件演化的类型"></a>软件演化的类型</h3><h4 id="软件演化的哲学"><a href="#软件演化的哲学" class="headerlink" title="软件演化的哲学"></a>软件演化的哲学</h4><p>在开始编写代码时，你绝对不会对程序有深入的理解。一旦有机会重新审视你的程序，就要用自己的全部所学去改进它</p>
+<h3 id="重构简介"><a href="#重构简介" class="headerlink" title="重构简介"></a>重构简介</h3><p>在不改变软件外部行为的前提下，对其内部结构进行改变，使之更容易理解并便于修改</p>
+<h4 id="重构的理由"><a href="#重构的理由" class="headerlink" title="重构的理由"></a>重构的理由</h4><ul>
+<li>代码重复</li>
+<li>冗长的子程序（戴着面向对象面具的面向过程代码）</li>
+<li>循环过长或嵌套过程</li>
+<li>内聚性太差的类</li>
+<li>类的接口未能提供层次一致的抽象</li>
+<li>拥有太多参数的参数列表</li>
+<li>类的内部往往被局限于某个部分</li>
+<li>变化导致多个类的更改</li>
+<li>对继承体系的同样修改</li>
+<li>case语句需要做相同的修改</li>
+<li>同时使用的相关数据并未以类的方式进行组织</li>
+<li>成员函数使用其他类的特性比自身类的特性更多</li>
+<li>过多使用基本数据类型</li>
+<li>某个类无所事事</li>
+<li>一系列传递流浪数据的子程序</li>
+<li>中间对象无事可做</li>
+<li>某个类同其他类关系过于亲密</li>
+<li>子程序命名不恰当</li>
+<li>数据成员被设置为公用</li>
+<li>某个派生类仅使用了某类的很少一部分成员函数</li>
+<li>注释被用于解释难懂的代码</li>
+<li>使用了全局变量</li>
+<li>在子程序调用前使用了设置代码，或在调用后使用了收尾代码</li>
+<li>程序中的一些代码似乎是在将来的某个时候才会被用到</li>
+</ul>
+<h4 id="特定的重构"><a href="#特定的重构" class="headerlink" title="特定的重构"></a>特定的重构</h4><ul>
+<li>用具名变量代替神秘数值</li>
+<li>使变量的名字更为清晰且传递更多信息</li>
+<li>将表达式内联化</li>
+<li>用函数来代替表达式</li>
+<li>引入中间变量</li>
+<li>用多个单一用途变量代替某个多用途变量</li>
+<li>在局部用途中使用局部变量而不是参数</li>
+<li>将基础数据类型转换为类</li>
+<li>将一组类型码转换为类或枚举类型</li>
+<li>将数组转换为对象</li>
+<li>把群集封装起来</li>
+<li>用数据类来代替传统记录</li>
+</ul>
+<h4 id="语句级的重构"><a href="#语句级的重构" class="headerlink" title="语句级的重构"></a>语句级的重构</h4><ul>
+<li>分解布尔表达式</li>
+<li>将复杂布尔表达式转换成命名准确的布尔函数</li>
+<li>合并条件语句不同部分中的重复代码片段</li>
+<li>使用return或break而不是循环控制变量</li>
+<li>在嵌套的if-then-else语句中一旦知道答案就立即返回</li>
+<li>用多态来替代条件语句（能大幅度降低if-else判断）</li>
+<li>创建和使用null对象而不是去检验空值</li>
+</ul>
+<h4 id="子层序级重构"><a href="#子层序级重构" class="headerlink" title="子层序级重构"></a>子层序级重构</h4><ul>
+<li>提取子程序或方法</li>
+<li>将子程序的代码内联化</li>
+<li>将冗长的子程序转换为类</li>
+<li>用简单算法替代复杂算法</li>
+<li>增加参数</li>
+<li>删除参数</li>
+<li>将查询操作从修改操作中独立出来</li>
+<li>合并相似的子程序，通过参数区分他们的功能</li>
+<li>将行为取决于参数的子程序拆分开来</li>
+<li>传递整个对象而非特定成员（对象多个值传递给子程序）</li>
+<li>传递特定成员而非整个对象（创建对象的唯一理由就是将它传递给子程序）</li>
+<li>包装向下转型的操作</li>
+</ul>
+<h4 id="类接口的重构"><a href="#类接口的重构" class="headerlink" title="类接口的重构"></a>类接口的重构</h4><ul>
+<li>将一个类变成两个类（一个类具备了两种截然不同的功能）</li>
+<li>删除类（某个类无所事事）</li>
+<li>去除委托关系</li>
+<li>去掉中间人（如果存在A调B，B调C，有时让A调C更好）</li>
+<li>用委托代替继承（委托了部分的成员函数，拥有更多的控制权）</li>
+<li>用继承代替委托（委托了全部的成员函数）</li>
+<li>引入外部的成员函数</li>
+<li>引入扩展类（需要多个额外的成员函数）</li>
+<li>对暴露在外的成员变量进行封装</li>
+<li>对于不能修改的类成员，删除相应的set成员函数</li>
+<li>隐藏那些不会在类之外被用到的成员函数</li>
+<li>封装不使用的成员函数</li>
+<li>合并那些非常类似的基类和派生类</li>
+</ul>
+<h4 id="系统级重构"><a href="#系统级重构" class="headerlink" title="系统级重构"></a>系统级重构</h4><ul>
+<li>为无法控制的数据创建明确的索引源头</li>
+<li>用Factor Method模式而不是简单地构造函数</li>
+</ul>
+<h3 id="安全的重构"><a href="#安全的重构" class="headerlink" title="安全的重构"></a>安全的重构</h3><blockquote>
+<ul>
+<li>重构是一种改善代码质量的技术，如果使用不当，带来的麻烦比带来的好处要多</li>
+<li>保存初始代码（保证能回到初始状态）</li>
+<li>重构的步伐请小些（更好理解对程序的更改）</li>
+<li>同一时间只做一项重构（互相会有影响，出现错误不知道具体原因）</li>
+<li>把要做的事情一条条列出来（保持思路连贯）</li>
+<li>设置一个停车场（把需要放在未来某个时间进行而现在可以放在一边的工作列出来）</li>
+<li>多使用检查点</li>
+<li>利用编译器警告信息</li>
+<li>重新测试</li>
+<li>增加测试用例（测试用例是重构的基础，如果原先没测试用例也应在重构是补充）</li>
+<li>检查对代码的修改</li>
+<li>根据重构风险级别来调整重构方法</li>
+</ul>
+</blockquote>
+<h4 id="不宜重构的情况"><a href="#不宜重构的情况" class="headerlink" title="不宜重构的情况"></a>不宜重构的情况</h4><ul>
+<li>不要把重构当作先写后改的代名词</li>
+<li>避免用重构代替重写</li>
+</ul>
+<h3 id="重构的策略"><a href="#重构的策略" class="headerlink" title="重构的策略"></a>重构的策略</h3><blockquote>
+<ul>
+<li>在增加子程序时进行重构</li>
+<li>在添加类的时候进行重构</li>
+<li>在修补缺陷的时候进行重构</li>
+<li>关注易于出错的模块</li>
+<li>关注高度复杂的模块</li>
+<li>在维护环境下，改善你手中正在处理的代码</li>
+<li>定义清楚干净代码和拙劣代码之间的边界（现实世界通常会比你想象的更加混乱）</li>
+</ul>
+</blockquote>
+<h2 id="代码调整策略"><a href="#代码调整策略" class="headerlink" title="代码调整策略"></a>代码调整策略</h2><h3 id="代码调整简介"><a href="#代码调整简介" class="headerlink" title="代码调整简介"></a>代码调整简介</h3><p>代码调整并不是改善性能的最好方法，完善程序架构，修改类的设计，选择更好的算法往往能带来更好的性能提升</p>
+<h4 id="何时调整代码"><a href="#何时调整代码" class="headerlink" title="何时调整代码"></a>何时调整代码</h4><p>在程序完成并正确之后，再去检查系统的性能</p>
+<h4 id="编译器优化"><a href="#编译器优化" class="headerlink" title="编译器优化"></a>编译器优化</h4><p>如今编译器的优化功能比你想象的要强大很多，在选择编译器时比较在你的程序上所体现的性能优化</p>
+<h4 id="常见的低效率之源"><a href="#常见的低效率之源" class="headerlink" title="常见的低效率之源"></a>常见的低效率之源</h4><ul>
+<li>输入/输出操作</li>
+<li>换页（操作引发内存换页）</li>
+<li>系统调用</li>
+<li>解释型语言（解析执行，导致执行较慢）</li>
+<li>代码错误</li>
+</ul>
+<h3 id="性能测量"><a href="#性能测量" class="headerlink" title="性能测量"></a>性能测量</h3><p>优化的前提是代码能够测量</p>
+<h3 id="反复调整"><a href="#反复调整" class="headerlink" title="反复调整"></a>反复调整</h3><p>一旦确认了性能瓶颈，在优化时反复尝试，直到发现有用的方法</p>
+<h3 id="代码调整方法总结"><a href="#代码调整方法总结" class="headerlink" title="代码调整方法总结"></a>代码调整方法总结</h3><blockquote>
+<ul>
+<li>1.用设计良好的代码来开发软件</li>
+<li>2.如果代码的性能较差</li>
+<li>2.1 保存代码的可运行版本</li>
+<li>2.2 对系统进行分析测量</li>
+<li>2.3 判断性能拙劣是否源于设计、数据类型或算法，确定是否应该做代码调整</li>
+<li>2.4 对确定的瓶颈代码进行调整</li>
+<li>2.5 调整后对性能提升进行测量</li>
+<li>2.6 如果没有优化回滚代码</li>
+<li>3.不断重复</li>
+</ul>
+</blockquote>
+<h2 id="代码调整技术"><a href="#代码调整技术" class="headerlink" title="代码调整技术"></a>代码调整技术</h2><h3 id="逻辑"><a href="#逻辑" class="headerlink" title="逻辑"></a>逻辑</h3><h4 id="按照出现的频率来调整顺序"><a href="#按照出现的频率来调整顺序" class="headerlink" title="按照出现的频率来调整顺序"></a>按照出现的频率来调整顺序</h4><p>让运行速度最快和判断结果最有可能为真的判断首先被执行</p>
+<h4 id="相似逻辑结构之间的性能比较"><a href="#相似逻辑结构之间的性能比较" class="headerlink" title="相似逻辑结构之间的性能比较"></a>相似逻辑结构之间的性能比较</h4><p>以测量结果说话</p>
+<h4 id="用查询表代替复杂表达式"><a href="#用查询表代替复杂表达式" class="headerlink" title="用查询表代替复杂表达式"></a>用查询表代替复杂表达式</h4><p>比逻辑判断更为高效</p>
+<h4 id="使用惰性求值"><a href="#使用惰性求值" class="headerlink" title="使用惰性求值"></a>使用惰性求值</h4><p>避免做任何不必要的事</p>
+<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><h4 id="循环内的判断外提"><a href="#循环内的判断外提" class="headerlink" title="循环内的判断外提"></a>循环内的判断外提</h4><p>避免每次循环进行条件判断，提升性能</p>
+<h4 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h4><p>将多个相同集合的操作合并到一起</p>
+<h4 id="展开"><a href="#展开" class="headerlink" title="展开"></a>展开</h4><p>循环展开的目的是减少维护循环所需要做的工作</p>
+<h4 id="尽可能减少循环内部做的工作"><a href="#尽可能减少循环内部做的工作" class="headerlink" title="尽可能减少循环内部做的工作"></a>尽可能减少循环内部做的工作</h4><p>编写高效循环的核心</p>
+<h4 id="哨兵值"><a href="#哨兵值" class="headerlink" title="哨兵值"></a>哨兵值</h4><p>把哨兵值放到循环的末尾（类似于设计模式中的毒药丸模式）</p>
+<h4 id="最忙的循环放在最内层"><a href="#最忙的循环放在最内层" class="headerlink" title="最忙的循环放在最内层"></a>最忙的循环放在最内层</h4><p>算循环次数应该内循环和外循环一起计算，外循环越小总循环数越小</p>
+<h4 id="消减强度"><a href="#消减强度" class="headerlink" title="消减强度"></a>消减强度</h4><p>用多次轻量级运算来代替一次代价高昂的运算</p>
+<h3 id="数据变换"><a href="#数据变换" class="headerlink" title="数据变换"></a>数据变换</h3><p>减少程序规模和改进速度方面的利器</p>
+<h4 id="尽可能使用整型数而不是浮点数"><a href="#尽可能使用整型数而不是浮点数" class="headerlink" title="尽可能使用整型数而不是浮点数"></a>尽可能使用整型数而不是浮点数</h4><p>整型数的运算速度要比浮点数快很多</p>
+<h4 id="数组维度尽可能小"><a href="#数组维度尽可能小" class="headerlink" title="数组维度尽可能小"></a>数组维度尽可能小</h4><h4 id="尽可能减少数组引用"><a href="#尽可能减少数组引用" class="headerlink" title="尽可能减少数组引用"></a>尽可能减少数组引用</h4><p>数组元素的访问成本比简单变量要高</p>
+<h4 id="使用缓存"><a href="#使用缓存" class="headerlink" title="使用缓存"></a>使用缓存</h4><p>使常用的值比不太常用的值更容易被获取</p>
+<h3 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h3><h4 id="使用代数恒等式"><a href="#使用代数恒等式" class="headerlink" title="使用代数恒等式"></a>使用代数恒等式</h4><h4 id="削弱运算强度"><a href="#削弱运算强度" class="headerlink" title="削弱运算强度"></a>削弱运算强度</h4><ul>
+<li>加法代替乘法</li>
+<li>乘法代替幂乘</li>
+<li>整型代替浮点数</li>
+<li>单浮点数代替双浮点数</li>
+<li>用移位操作代替乘2除2</li>
+</ul>
+<h4 id="小心系统函数"><a href="#小心系统函数" class="headerlink" title="小心系统函数"></a>小心系统函数</h4><p>部分系统函数运行起来很慢，提供的精度常常也根本不够用</p>
+<h4 id="使用正确的常量类型"><a href="#使用正确的常量类型" class="headerlink" title="使用正确的常量类型"></a>使用正确的常量类型</h4><p>类型转换的成本也不低</p>
+<h4 id="预先算出结果"><a href="#预先算出结果" class="headerlink" title="预先算出结果"></a>预先算出结果</h4><p>提前计算好结果，避免每次使用时重复计算</p>
+<h4 id="删除公共子表达式"><a href="#删除公共子表达式" class="headerlink" title="删除公共子表达式"></a>删除公共子表达式</h4><p>如果发现一个表达式一直出现在你眼前，就将它赋给一个变量</p>
+<h3 id="子程序"><a href="#子程序" class="headerlink" title="子程序"></a>子程序</h3><h4 id="将子程序进行内联"><a href="#将子程序进行内联" class="headerlink" title="将子程序进行内联"></a>将子程序进行内联</h4><p>减少入栈出栈成本</p>
+<h4 id="用低级代码重写代码"><a href="#用低级代码重写代码" class="headerlink" title="用低级代码重写代码"></a>用低级代码重写代码</h4><p>当性能出现瓶颈时，应该把瓶颈模块用低级语言重写，低级语言的可控性更强</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2018/12/08/代码大全摘要-系统考虑/" class="prev">PREV</a><a href="/2018/12/08/代码大全摘要-变量与语句/" class="next">NEXT</a></div><div class="copyright"><p>© 2015 - 2018 <a href="http://chuninsane.github.io">zhanggliangg</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>

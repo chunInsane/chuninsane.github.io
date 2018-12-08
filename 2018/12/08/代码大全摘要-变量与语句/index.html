@@ -1,0 +1,201 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 代码大全摘要-变量与语句 · chuninsane</title><meta name="description" content="代码大全摘要-变量与语句 - zhanggliangg"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://chuninsane.github.io/atom.xml" title="chuninsane"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/chuninsane" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">代码大全摘要-变量与语句</h1><div class="post-info">Dec 8, 2018</div><div class="post-content"><h2 id="使用变量的一般事项"><a href="#使用变量的一般事项" class="headerlink" title="使用变量的一般事项"></a>使用变量的一般事项</h2><h3 id="变量初始化原则"><a href="#变量初始化原则" class="headerlink" title="变量初始化原则"></a>变量初始化原则</h3><blockquote>
+<ul>
+<li>声明变量的时候初始化（一种非常方便的防御式编程）</li>
+<li>在靠近变量第一次使用的位置初始化它</li>
+<li>在靠近第一次使用变量的位置声明和定义该变量（理想情况下）</li>
+<li>在可能的情况下使用final或者const</li>
+<li>特别注意计数器和累加器（未进行重置）</li>
+<li>检查是否需要重新初始化</li>
+<li>用可执行代码来初始化变量</li>
+<li>利用编译器的警告信息</li>
+<li>检查输入参数的合法性</li>
+<li>使用内存访问检查工具来检查错误的指针</li>
+<li>在程序开始时初始化工作内存</li>
+</ul>
+</blockquote>
+<h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><p>变量在程序内的可见和可引用的范围</p>
+<h4 id="使变量引用局部化"><a href="#使变量引用局部化" class="headerlink" title="使变量引用局部化"></a>使变量引用局部化</h4><p>缩短访问窗口，避免不当的修改，减少攻击窗口</p>
+<h4 id="尽可能缩短变量的“存活”时间"><a href="#尽可能缩短变量的“存活”时间" class="headerlink" title="尽可能缩短变量的“存活”时间"></a>尽可能缩短变量的“存活”时间</h4><p>缩短存活时间，避免不当的修改，减少攻击窗口</p>
+<h4 id="减少作用域的一般原则"><a href="#减少作用域的一般原则" class="headerlink" title="减少作用域的一般原则"></a>减少作用域的一般原则</h4><ul>
+<li>在循环开始之前再去初始化该循环里使用的变量</li>
+<li>直到变量即将被使用时再为其赋值</li>
+<li>把相关语句放到一起</li>
+<li>把相关语句组提取成单独的子程序 — 减小阔度和缩短存活时间</li>
+<li>开始时采用最严格的可见性，然后根据需要扩展变量的作用域</li>
+</ul>
+<h4 id="有关缩小变量作用域的说明"><a href="#有关缩小变量作用域的说明" class="headerlink" title="有关缩小变量作用域的说明"></a>有关缩小变量作用域的说明</h4><p>“方便性”和“智力可管理性”两种理念之间的区别，归根结底是侧重写程序还是读程序之间的区别</p>
+<h3 id="持续性"><a href="#持续性" class="headerlink" title="持续性"></a>持续性</h3><p>对数据生命期的另一种描述</p>
+<h4 id="避免使用未初始化或过期的数据"><a href="#避免使用未初始化或过期的数据" class="headerlink" title="避免使用未初始化或过期的数据"></a>避免使用未初始化或过期的数据</h4><ul>
+<li>加入调试代码或者断言来检查那些关键变量的合理取值</li>
+<li>准备抛弃变量时给它们赋上“不合理的数值”</li>
+<li>编写代码时要假设数据并没有持续性</li>
+<li>养成在使用所有数据之前声明和初始化的习惯</li>
+</ul>
+<h3 id="为变量指定单一用途"><a href="#为变量指定单一用途" class="headerlink" title="为变量指定单一用途"></a>为变量指定单一用途</h3><blockquote>
+<ul>
+<li>变量只用于单一用途（多用途可能会使代码阅读者感觉疑惑）</li>
+<li>避免让代码具有隐含含义</li>
+<li>确保使用了所有已声明的变量（与错误率正相关）</li>
+</ul>
+</blockquote>
+<h2 id="变量名的力量"><a href="#变量名的力量" class="headerlink" title="变量名的力量"></a>变量名的力量</h2><h3 id="选择变量名的注意事项"><a href="#选择变量名的注意事项" class="headerlink" title="选择变量名的注意事项"></a>选择变量名的注意事项</h3><p>变量和变量名本质上是同一事物，变量的好坏很大程度取决于它的命名的好坏</p>
+<h4 id="最重要的命名注意事项"><a href="#最重要的命名注意事项" class="headerlink" title="最重要的命名注意事项"></a>最重要的命名注意事项</h4><p>名字应该尽量准确（完全、准确描述出该变量所表达的事物、无歧义）</p>
+<h4 id="以问题为导向"><a href="#以问题为导向" class="headerlink" title="以问题为导向"></a>以问题为导向</h4><p>表达是什么，而不是如何</p>
+<h4 id="最适当的名字长度"><a href="#最适当的名字长度" class="headerlink" title="最适当的名字长度"></a>最适当的名字长度</h4><p>太短无法传达足够的信息，太长的名字很难写，而且阅读成本较高</p>
+<h4 id="变量名对作用域的影响"><a href="#变量名对作用域的影响" class="headerlink" title="变量名对作用域的影响"></a>变量名对作用域的影响</h4><p>较长的名字适用于很少用到的变量或者全局变量<br>较短的名字则适用于局部变量或循环变量</p>
+<h4 id="变量名中的计算值限定词"><a href="#变量名中的计算值限定词" class="headerlink" title="变量名中的计算值限定词"></a>变量名中的计算值限定词</h4><p>这一部分赋予主要含义的部分应当位于最前面，显得更突出。更重要的是保证一致性</p>
+<h4 id="变量名中的常用对仗词"><a href="#变量名中的常用对仗词" class="headerlink" title="变量名中的常用对仗词"></a>变量名中的常用对仗词</h4><ul>
+<li>begin/end</li>
+<li>first/last</li>
+<li>locked/unlocked</li>
+<li>min/max</li>
+<li>next/previous</li>
+<li>old/new</li>
+<li>opened/closed</li>
+<li>visible/invisible</li>
+<li>source/target</li>
+<li>source/destination</li>
+<li>up/down</li>
+</ul>
+<h3 id="为特定类型的数据命名"><a href="#为特定类型的数据命名" class="headerlink" title="为特定类型的数据命名"></a>为特定类型的数据命名</h3><h4 id="为循环下标命名"><a href="#为循环下标命名" class="headerlink" title="为循环下标命名"></a>为循环下标命名</h4><p>仅用在循环内部可以尽量简单<br>在循环外部使用时变量名应具有更好的描述性<br>循环多重嵌套，应设置较好的变量名</p>
+<h4 id="为状态变量命名"><a href="#为状态变量命名" class="headerlink" title="为状态变量命名"></a>为状态变量命名</h4><p>尽量清晰，避免猜测</p>
+<h4 id="为临时变量命名"><a href="#为临时变量命名" class="headerlink" title="为临时变量命名"></a>为临时变量命名</h4><p>临时变量也需要含义</p>
+<h4 id="为布尔量命名"><a href="#为布尔量命名" class="headerlink" title="为布尔量命名"></a>为布尔量命名</h4><ul>
+<li>谨记经典的命名（done、error、found、success）</li>
+<li>isDone这种命名降低了简单逻辑的可读性</li>
+<li>使用肯定的布尔命名（否定命名会降低可读性）</li>
+</ul>
+<h4 id="为常量命名"><a href="#为常量命名" class="headerlink" title="为常量命名"></a>为常量命名</h4><p>命名表含义而不表示具体取值</p>
+<h3 id="命名规则的力量"><a href="#命名规则的力量" class="headerlink" title="命名规则的力量"></a>命名规则的力量</h3><blockquote>
+<ul>
+<li>有效的规则能让你更加专注于需要创造的点</li>
+<li>具体命名规则视语言而定</li>
+</ul>
+</blockquote>
+<h3 id="应该避免的名字"><a href="#应该避免的名字" class="headerlink" title="应该避免的名字"></a>应该避免的名字</h3><blockquote>
+<ul>
+<li>避免使用令人误解的名字或缩写</li>
+<li>避免使用相似含义的名字</li>
+<li>避免使用具有不同含义但却有相似名字的变量名</li>
+<li>避免在名字中使用数字</li>
+<li>避免在名字中拼错单词（很抽象）</li>
+<li>不要仅靠大小写来区别变量名</li>
+<li>避免使用多种自然语言</li>
+<li>不要使用与变量含义完全无关的名字</li>
+</ul>
+</blockquote>
+<h2 id="组织直线型代码"><a href="#组织直线型代码" class="headerlink" title="组织直线型代码"></a>组织直线型代码</h2><h3 id="必须有明确顺序的语句"><a href="#必须有明确顺序的语句" class="headerlink" title="必须有明确顺序的语句"></a>必须有明确顺序的语句</h3><blockquote>
+<ul>
+<li>设法组织代码，使得依赖关系变得明显</li>
+<li>使子程序名能突显依赖关系</li>
+<li>利用子程序参数明确显示依赖关系</li>
+<li>用注释对依赖关系进行说明</li>
+</ul>
+</blockquote>
+<h3 id="顺序无关的语句"><a href="#顺序无关的语句" class="headerlink" title="顺序无关的语句"></a>顺序无关的语句</h3><h4 id="使代码易于自上而下地阅读"><a href="#使代码易于自上而下地阅读" class="headerlink" title="使代码易于自上而下地阅读"></a>使代码易于自上而下地阅读</h4><p>能提高代码的可读性（跳跃性阅读犹如切换上下文）</p>
+<h4 id="把相关的语句组织在一起"><a href="#把相关的语句组织在一起" class="headerlink" title="把相关的语句组织在一起"></a>把相关的语句组织在一起</h4><p>增加代码的关联性</p>
+<h2 id="使用条件语句"><a href="#使用条件语句" class="headerlink" title="使用条件语句"></a>使用条件语句</h2><h3 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h3><h4 id="if-else语句"><a href="#if-else语句" class="headerlink" title="if-else语句"></a>if-else语句</h4><ul>
+<li>首先写正常路径，再处理不常见情况</li>
+<li>把正常情况放在if后面</li>
+<li>让if后面跟随一个有意义的语句</li>
+<li>考虑else子句（表示考虑到该场景）</li>
+<li>测试else子句的正确性</li>
+</ul>
+<h4 id="if-then-else语句"><a href="#if-then-else语句" class="headerlink" title="if-then-else语句"></a>if-then-else语句</h4><ul>
+<li>利用布尔函数调用简化复杂的检测（提高可读性）</li>
+<li>把最常见的情况放在前面（减少代码阅读者的代码阅读量）</li>
+<li>确保所有的情况都考虑到</li>
+</ul>
+<h3 id="case语句"><a href="#case语句" class="headerlink" title="case语句"></a>case语句</h3><h4 id="为case选择最有效的排列顺序"><a href="#为case选择最有效的排列顺序" class="headerlink" title="为case选择最有效的排列顺序"></a>为case选择最有效的排列顺序</h4><ul>
+<li>按字母顺序或按数字顺序排列各种情况</li>
+<li>把正常的情况放在前面</li>
+<li>按执行频率排列case子句</li>
+</ul>
+<h4 id="使用case语句的诀窍"><a href="#使用case语句的诀窍" class="headerlink" title="使用case语句的诀窍"></a>使用case语句的诀窍</h4><ul>
+<li>简化每种情况对应的操作</li>
+<li>把default子句只用于检查真正的默认情况</li>
+</ul>
+<h2 id="控制循环"><a href="#控制循环" class="headerlink" title="控制循环"></a>控制循环</h2><h3 id="选择循环的种类"><a href="#选择循环的种类" class="headerlink" title="选择循环的种类"></a>选择循环的种类</h3><h4 id="什么时候使用while循环"><a href="#什么时候使用while循环" class="headerlink" title="什么时候使用while循环"></a>什么时候使用while循环</h4><ul>
+<li>检测位于循环的开始（卡开始状态）</li>
+<li>检测位于循环的结尾（卡结束状态）</li>
+</ul>
+<h4 id="什么时候用带退出的循环"><a href="#什么时候用带退出的循环" class="headerlink" title="什么时候用带退出的循环"></a>什么时候用带退出的循环</h4><ul>
+<li>正常的带退出的循环</li>
+<li>非正常的带退出循环</li>
+</ul>
+<h4 id="什么时候使用for循环"><a href="#什么时候使用for循环" class="headerlink" title="什么时候使用for循环"></a>什么时候使用for循环</h4><p>固定次数循环，for是一个比较好的选择</p>
+<h4 id="何时使用foreach循环"><a href="#何时使用foreach循环" class="headerlink" title="何时使用foreach循环"></a>何时使用foreach循环</h4><p>特别适合数据和容器元素的遍历</p>
+<h3 id="循环控制"><a href="#循环控制" class="headerlink" title="循环控制"></a>循环控制</h3><h4 id="进入循环"><a href="#进入循环" class="headerlink" title="进入循环"></a>进入循环</h4><ul>
+<li>把初始代码紧放在循环前面</li>
+<li>用while（true）表示无限循环</li>
+<li>在while循环更适用的时候，不要使用for循环</li>
+</ul>
+<h4 id="处理好循环体"><a href="#处理好循环体" class="headerlink" title="处理好循环体"></a>处理好循环体</h4><ul>
+<li>用花括号把循环体中的语句括起来</li>
+<li>避免空循环（会隐藏逻辑）</li>
+<li>一个循环只做一件事（单一职责）</li>
+</ul>
+<h4 id="退出循环"><a href="#退出循环" class="headerlink" title="退出循环"></a>退出循环</h4><ul>
+<li>设法确认循环能够终止</li>
+<li>使循环条件看起来很明显</li>
+<li>不要为了使循环终止更改循环下标</li>
+<li>不要依赖于循环结束时的下标取值（代码更改时很容易忽略掉）</li>
+<li>考虑使用安全计数器（便于发现循环失控）</li>
+<li>提前退出循环，尽量控制break的数量（使用break，break数量太多可能导致出口控制混乱）</li>
+</ul>
+<h4 id="使用循环变量"><a href="#使用循环变量" class="headerlink" title="使用循环变量"></a>使用循环变量</h4><ul>
+<li>用整数或者枚举类型表示数组和循环的边界</li>
+<li>在嵌套循环中使用有意义的变量名来提高可读性</li>
+<li>用有意义的名字来避免循环下标串话</li>
+<li>把循环下标变量的作用域限制在本循环内</li>
+</ul>
+<h4 id="循环应该有多长"><a href="#循环应该有多长" class="headerlink" title="循环应该有多长"></a>循环应该有多长</h4><ul>
+<li>尽可能短，一目了然</li>
+<li>把嵌套控制在3层以内</li>
+<li>把长循环的内容移到子程序里</li>
+<li>要让长循环格外清晰</li>
+</ul>
+<h2 id="不常见的控制结构"><a href="#不常见的控制结构" class="headerlink" title="不常见的控制结构"></a>不常见的控制结构</h2><h3 id="子程序中的多处返回"><a href="#子程序中的多处返回" class="headerlink" title="子程序中的多处返回"></a>子程序中的多处返回</h3><blockquote>
+<ul>
+<li>如果能增强可读性，那么就使用return</li>
+<li>早返回或早退出来简化复杂的错误处理</li>
+<li>减少子程序中的return数量（只有能增强可读性时才使用）</li>
+</ul>
+</blockquote>
+<h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><p>递归在解决复杂问题时是很有价值的工具，可以降低子程序的复杂度</p>
+<h4 id="使用递归的技巧"><a href="#使用递归的技巧" class="headerlink" title="使用递归的技巧"></a>使用递归的技巧</h4><ul>
+<li>确认递归能够停止</li>
+<li>使用安全计数器防止出现无穷递归</li>
+<li>把递归限制在一个子程序内</li>
+<li>留心栈空间（递归深度过身会导致StackOverflow）</li>
+<li>不要用递归解决简单的问题（成本收益不成正比）</li>
+</ul>
+<h3 id="goto"><a href="#goto" class="headerlink" title="goto"></a>goto</h3><p>能不用就不用，要用时也要有充分的理由</p>
+<h2 id="表驱动法"><a href="#表驱动法" class="headerlink" title="表驱动法"></a>表驱动法</h2><h3 id="表驱动法使用总则"><a href="#表驱动法使用总则" class="headerlink" title="表驱动法使用总则"></a>表驱动法使用总则</h3><p>适当场景表驱动法会简化代码逻辑，降低维护成本</p>
+<h2 id="一般控制问题"><a href="#一般控制问题" class="headerlink" title="一般控制问题"></a>一般控制问题</h2><h3 id="布尔表达式"><a href="#布尔表达式" class="headerlink" title="布尔表达式"></a>布尔表达式</h3><p>用true和false做布尔判断，增强可读性</p>
+<h4 id="简化复杂的表达式"><a href="#简化复杂的表达式" class="headerlink" title="简化复杂的表达式"></a>简化复杂的表达式</h4><ul>
+<li>拆分复杂的判断并引入新的布尔变量</li>
+<li>把复杂的表达式做成布尔函数</li>
+<li>用决策表代替复杂的条件判断</li>
+</ul>
+<h4 id="用括号使表达式更加清晰"><a href="#用括号使表达式更加清晰" class="headerlink" title="用括号使表达式更加清晰"></a>用括号使表达式更加清晰</h4><p>尽量不要依赖语言求值优先级，可能你懂但别人不懂，使用括号提高代码可读性</p>
+<h4 id="理解布尔表达式是如何求值的"><a href="#理解布尔表达式是如何求值的" class="headerlink" title="理解布尔表达式是如何求值的"></a>理解布尔表达式是如何求值的</h4><p>各个语言求值方式千变万化</p>
+<h4 id="按照数轴的顺序编写数值表达式"><a href="#按照数轴的顺序编写数值表达式" class="headerlink" title="按照数轴的顺序编写数值表达式"></a>按照数轴的顺序编写数值表达式</h4><p>从左到右、从小到大地排列元素</p>
+<h4 id="与0比较的指导原则"><a href="#与0比较的指导原则" class="headerlink" title="与0比较的指导原则"></a>与0比较的指导原则</h4><ul>
+<li>隐式地比较逻辑</li>
+<li>把数和0相比较（尽可能使用显示写法，增强可读性）</li>
+</ul>
+<h3 id="语句块"><a href="#语句块" class="headerlink" title="语句块"></a>语句块</h3><p>把括号成对写出；用括号来把条件表达清楚</p>
+<h3 id="减少深度嵌套技术"><a href="#减少深度嵌套技术" class="headerlink" title="减少深度嵌套技术"></a>减少深度嵌套技术</h3><blockquote>
+<ul>
+<li>重复判断一部分条件</li>
+<li>转换成一组if-then-else语句</li>
+<li>转换为case语句</li>
+<li>把深层嵌套的代码抽取出单独的子程序（推荐）</li>
+<li>使用多态避免使用if-else</li>
+<li>用状态变量重写代码</li>
+<li>使用异常</li>
+<li>重新设计深层嵌套代码</li>
+</ul>
+</blockquote>
+</div></article></div></main><footer><div class="paginator"><a href="/2018/12/08/代码大全摘要-代码改善/" class="prev">PREV</a><a href="/2018/12/08/代码大全摘要-高质量代码/" class="next">NEXT</a></div><div class="copyright"><p>© 2015 - 2018 <a href="http://chuninsane.github.io">zhanggliangg</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>

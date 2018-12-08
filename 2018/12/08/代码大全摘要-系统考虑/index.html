@@ -1,0 +1,99 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 代码大全摘要-系统考虑 · chuninsane</title><meta name="description" content="代码大全摘要-系统考虑 - zhanggliangg"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://chuninsane.github.io/atom.xml" title="chuninsane"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/chuninsane" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">代码大全摘要-系统考虑</h1><div class="post-info">Dec 8, 2018</div><div class="post-content"><h2 id="程序规模对构建的影响"><a href="#程序规模对构建的影响" class="headerlink" title="程序规模对构建的影响"></a>程序规模对构建的影响</h2><h3 id="交流和规模"><a href="#交流和规模" class="headerlink" title="交流和规模"></a>交流和规模</h3><p>随着项目成员的增多，交流路径也随之增加，乘积关系</p>
+<h3 id="项目规模对生产率的影响"><a href="#项目规模对生产率的影响" class="headerlink" title="项目规模对生产率的影响"></a>项目规模对生产率的影响</h3><p>小项目影响生产率的核心因素为单个程序员的技能水平。随着项目规模的增大，组织方式对生产率的影响将逐渐增加</p>
+<h2 id="管理构建"><a href="#管理构建" class="headerlink" title="管理构建"></a>管理构建</h2><h3 id="鼓励良好的编程实践"><a href="#鼓励良好的编程实践" class="headerlink" title="鼓励良好的编程实践"></a>鼓励良好的编程实践</h3><p>由一位受人尊敬的架构师来做（有时项目中的架构师只是一名在项目中待的时间非常长的资深闲杂人士）</p>
+<h4 id="设定标准的考虑事项"><a href="#设定标准的考虑事项" class="headerlink" title="设定标准的考虑事项"></a>设定标准的考虑事项</h4><p>标准有助于减少项目中随意出现的分歧，如果反对严格的标准（有些东西说不上对错），可以使用灵活的原则、一些建议</p>
+<h4 id="鼓励良好的编程实践技术"><a href="#鼓励良好的编程实践技术" class="headerlink" title="鼓励良好的编程实践技术"></a>鼓励良好的编程实践技术</h4><ul>
+<li>给项目的每一部分分派两个人（至少这块代码两个人确定能工作）</li>
+<li>逐行复查代码</li>
+<li>要求代码签名（保证代码质量）</li>
+<li>安排一些好的代码示例供人参考</li>
+<li>强调代码是公有财产</li>
+<li>奖励好代码（鼓励机制）</li>
+</ul>
+<h3 id="配置管理（变更控制）"><a href="#配置管理（变更控制）" class="headerlink" title="配置管理（变更控制）"></a>配置管理（变更控制）</h3><h4 id="什么是配置管理"><a href="#什么是配置管理" class="headerlink" title="什么是配置管理"></a>什么是配置管理</h4><p>scm（软件配置管理）关注于程序的需求、源代码、文档和测试数据</p>
+<h4 id="需求变更和设计变更"><a href="#需求变更和设计变更" class="headerlink" title="需求变更和设计变更"></a>需求变更和设计变更</h4><ul>
+<li>遵循某种系统化的变更控制手续</li>
+<li>成组地处理变更请求（一有想法就去变更可能导致好的变更被丢弃掉）</li>
+<li>评估每项变更的成本</li>
+<li>提防大量的变更请求</li>
+<li>成立变更控制委员会或者类似机构</li>
+<li>警惕官僚主义（变更控制倾向于滋生官僚主义）</li>
+</ul>
+<h4 id="软件代码变更"><a href="#软件代码变更" class="headerlink" title="软件代码变更"></a>软件代码变更</h4><p>版本控制软件（方便代码管理）</p>
+<h4 id="机器配置"><a href="#机器配置" class="headerlink" title="机器配置"></a>机器配置</h4><p>采用标准化配置有助于避免因为“配置略有不同”或者“使用工具的版本不同“导致的许多麻烦</p>
+<h4 id="备份计划"><a href="#备份计划" class="headerlink" title="备份计划"></a>备份计划</h4><p>不怕一万，只怕万一。数据丢失令人无比头大</p>
+<h4 id="评估构建进度表"><a href="#评估构建进度表" class="headerlink" title="评估构建进度表"></a>评估构建进度表</h4><h4 id="评估构建的工作量"><a href="#评估构建的工作量" class="headerlink" title="评估构建的工作量"></a>评估构建的工作量</h4><p>构建包括：详细设计、编码、调试、单元测试等，将以往的项目经验记录下来，用它来评估未来项目需要花费时间</p>
+<h4 id="对进度的影响因素"><a href="#对进度的影响因素" class="headerlink" title="对进度的影响因素"></a>对进度的影响因素</h4><ul>
+<li>需求开发者的经验和能力</li>
+<li>程序员的经验和能力</li>
+<li>团队的动力</li>
+<li>管理的质量</li>
+<li>重用的代码质量</li>
+<li>人员的流动性</li>
+<li>需求变更</li>
+<li>客户关系的质量</li>
+<li>用户对需求的参与度</li>
+<li>客户对此类软件的经验</li>
+<li>程序员对需求开发的参与程度</li>
+<li>计算机、程序和数据的分级安全环境</li>
+<li>文档量</li>
+<li>项目目标</li>
+</ul>
+<h4 id="如果落后怎么办"><a href="#如果落后怎么办" class="headerlink" title="如果落后怎么办"></a>如果落后怎么办</h4><ul>
+<li>希望自己能赶上（往往情况会越来越严重）</li>
+<li>扩充团队（火上浇油，新手需要时间熟悉项目才能发挥生产力）</li>
+<li>缩减项目规模（最有用的技术）</li>
+</ul>
+<h3 id="度量"><a href="#度量" class="headerlink" title="度量"></a>度量</h3><blockquote>
+<ul>
+<li>任何一种项目特性都是可以用某种方法来度量，而且总会比不度量好得多</li>
+<li>留心度量的副作用（人们会倾向于集中做那些被度量的工作，而忽视未被度量的工作）</li>
+</ul>
+</blockquote>
+<h3 id="把程序员当人看"><a href="#把程序员当人看" class="headerlink" title="把程序员当人看"></a>把程序员当人看</h3><h4 id="性能差异与质量差异"><a href="#性能差异与质量差异" class="headerlink" title="性能差异与质量差异"></a>性能差异与质量差异</h4><ul>
+<li>个体差异</li>
+<li>团队差异</li>
+</ul>
+<h4 id="信仰问题"><a href="#信仰问题" class="headerlink" title="信仰问题"></a>信仰问题</h4><ul>
+<li>要清楚地知道你是在处理一个敏感的问题</li>
+<li>对这些领域要使用“建议”或者”指导原则”</li>
+<li>避免流露明显的意图</li>
+<li>让程序员们制定他们自己的意图</li>
+</ul>
+<h3 id="管理你的管理者"><a href="#管理你的管理者" class="headerlink" title="管理你的管理者"></a>管理你的管理者</h3><h4 id="应对管理者的方法"><a href="#应对管理者的方法" class="headerlink" title="应对管理者的方法"></a>应对管理者的方法</h4><ul>
+<li>把你希望做什么的念头先藏起来</li>
+<li>把做事情正确方式传授给你的管理者</li>
+<li>关注你管理者的兴趣（按照他的真正意图去做）</li>
+<li>拒绝按照你的管理者所说的去做，坚持用正确的方法做自己的事</li>
+<li>换工作</li>
+</ul>
+<h2 id="集成"><a href="#集成" class="headerlink" title="集成"></a>集成</h2><h3 id="集成频率"><a href="#集成频率" class="headerlink" title="集成频率"></a>集成频率</h3><h4 id="阶段式集成"><a href="#阶段式集成" class="headerlink" title="阶段式集成"></a>阶段式集成</h4><p>适用场景：微型程序<br>当一次把系统中的类放到一起时，新的问题会不可避免地大量浮现，而问题的成因可能是方方面面的</p>
+<h4 id="增量集成"><a href="#增量集成" class="headerlink" title="增量集成"></a>增量集成</h4><p>一小块一小块的集成方式，有助于项目增长</p>
+<h4 id="增量集成的益处"><a href="#增量集成的益处" class="headerlink" title="增量集成的益处"></a>增量集成的益处</h4><ul>
+<li>易于定位错误（每次集成的组件数量较少）</li>
+<li>及早在项sdefswfrewrwfesfsfsrewweqewsfesregrtertg 目中取得系统级的成果</li>
+<li>改善对进度的监控（频繁进行集成，能及时反馈项目的状态）</li>
+<li>改善客户关系</li>
+<li>更多充分地测试系统中的各个单元</li>
+<li>能在更短的开发进度计划内建造出整个系统</li>
+</ul>
+<h3 id="增量集成的策略"><a href="#增量集成的策略" class="headerlink" title="增量集成的策略"></a>增量集成的策略</h3><h4 id="自顶向下集成"><a href="#自顶向下集成" class="headerlink" title="自顶向下集成"></a>自顶向下集成</h4><p>比较明显的缺点有：系统接口的演练到最后才能进行，很多问题留到了最后；系统需要一卡车的stub</p>
+<h4 id="自低向上集成"><a href="#自低向上集成" class="headerlink" title="自低向上集成"></a>自低向上集成</h4><p>缺点有：将最重要的高层系统接口的集成放到了最后，如果高层存在概念上的设计缺陷；如果对设计做重大更改，底层工作多半就得被扔掉</p>
+<h4 id="三明治集成"><a href="#三明治集成" class="headerlink" title="三明治集成"></a>三明治集成</h4><p>首先集成继承体系顶层的高层业务对象类，然后集成底部的与设备接口的类和广泛使用的工具类。它先集成了通常比较棘手的类，这是现实的、实用的方法</p>
+<h4 id="风险导向的集成"><a href="#风险导向的集成" class="headerlink" title="风险导向的集成"></a>风险导向的集成</h4><p>确认各个类对应的风险级别，优先实现最有挑战的，可以提前暴露风险</p>
+<h4 id="功能导向的集成"><a href="#功能导向的集成" class="headerlink" title="功能导向的集成"></a>功能导向的集成</h4><p>一次集成一项功能，通常需要一个较好的骨架，将各个功能挂在骨架上</p>
+<h4 id="T型集成"><a href="#T型集成" class="headerlink" title="T型集成"></a>T型集成</h4><p>建造并集成系统的一个直插到底层的块，以验证架构的假设，然后建设并集成系统的挑大梁部件，为开发余下的功能提供一个框架</p>
+<h3 id="daily-build与冒烟测试"><a href="#daily-build与冒烟测试" class="headerlink" title="daily build与冒烟测试"></a>daily build与冒烟测试</h3><p>每天都将各个源文件编译、链接并组合为一个可执行的程序，然后对这个程序进行冒烟测试（一种相对简单的检查）<br>降低了低质量的风险，每天对代码进行冒烟测试，可以防止质量问题遍布整个项目，将系统带入一种已知的良好状态</p>
+<h4 id="重要性"><a href="#重要性" class="headerlink" title="重要性"></a>重要性</h4><p>视为项目的脉搏</p>
+<h4 id="检查失败的build"><a href="#检查失败的build" class="headerlink" title="检查失败的build"></a>检查失败的build</h4><p>建立针对什么是“破坏了build”标准，把修复失败的build视为高等级的事情</p>
+<h4 id="每天进行冒烟测试"><a href="#每天进行冒烟测试" class="headerlink" title="每天进行冒烟测试"></a>每天进行冒烟测试</h4><p>冒烟测试不需要回归所有的点，但应该暴露主要的问题。daily build确保每天的编译都是干净的</p>
+<h4 id="让冒烟测试与时俱进"><a href="#让冒烟测试与时俱进" class="headerlink" title="让冒烟测试与时俱进"></a>让冒烟测试与时俱进</h4><p>冒烟测试应该随着系统的发展而发展，不要变成自欺欺人的演练</p>
+<h4 id="将daily-build和冒烟测试自动化"><a href="#将daily-build和冒烟测试自动化" class="headerlink" title="将daily build和冒烟测试自动化"></a>将daily build和冒烟测试自动化</h4><p>daily build是比较费时的事，让其自动化才能确保代码能build、冒烟测试能运行</p>
+<h4 id="仅当有意义时，才将revisions加入到build中"><a href="#仅当有意义时，才将revisions加入到build中" class="headerlink" title="仅当有意义时，才将revisions加入到build中"></a>仅当有意义时，才将revisions加入到build中</h4><p>当有一套具有一致性的状态的代码时，才将代码加入build中</p>
+<h4 id="别等太久才将修订加入进来"><a href="#别等太久才将修订加入进来" class="headerlink" title="别等太久才将修订加入进来"></a>别等太久才将修订加入进来</h4><p>频繁的集成有时迫使你将单一功能的构建分为若干阶段进行，降低开发风险</p>
+<h4 id="要求代码添加到系统之前，进行冒烟测试"><a href="#要求代码添加到系统之前，进行冒烟测试" class="headerlink" title="要求代码添加到系统之前，进行冒烟测试"></a>要求代码添加到系统之前，进行冒烟测试</h4><p>确保新的代码，在它影响其他的部件之前，能通过冒烟测试</p>
+<h4 id="惩罚破坏build的人"><a href="#惩罚破坏build的人" class="headerlink" title="惩罚破坏build的人"></a>惩罚破坏build的人</h4><p>保持build的健康是本项目优先级最高的事情之一，破坏build应该是异常，而不是惯例</p>
+<h4 id="在早上发布build的优势"><a href="#在早上发布build的优势" class="headerlink" title="在早上发布build的优势"></a>在早上发布build的优势</h4><p>测试人员有新鲜的build，如果build很晚，那么测试人员就必须等待很晚<br>白天开发人员在岗位上，解决问题的机会更大</p>
+<h4 id="即使有压力，也要进行daily-build和冒烟测试"><a href="#即使有压力，也要进行daily-build和冒烟测试" class="headerlink" title="即使有压力，也要进行daily build和冒烟测试"></a>即使有压力，也要进行daily build和冒烟测试</h4><p>代码趋于混乱的速度比平时</p>
+<h4 id="daily-build适用场景"><a href="#daily-build适用场景" class="headerlink" title="daily build适用场景"></a>daily build适用场景</h4><p>项目越大，增量集成就越重要</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2018/12/08/代码大全摘要-软件工艺/" class="prev">PREV</a><a href="/2018/12/08/代码大全摘要-代码改善/" class="next">NEXT</a></div><div class="copyright"><p>© 2015 - 2018 <a href="http://chuninsane.github.io">zhanggliangg</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
