@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chuninsane.github.io/"/>
-  <updated>2019-05-06T08:20:30.000Z</updated>
+  <updated>2019-05-13T15:15:03.406Z</updated>
   <id>http://chuninsane.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>云计算概念技术架构</title>
+    <link href="http://chuninsane.github.io/2019/05/13/%E4%BA%91%E8%AE%A1%E7%AE%97%E6%A6%82%E5%BF%B5%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84/"/>
+    <id>http://chuninsane.github.io/2019/05/13/云计算概念技术架构/</id>
+    <published>2019-05-13T15:04:11.000Z</published>
+    <updated>2019-05-13T15:15:03.406Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="云计算基础"><a href="#云计算基础" class="headerlink" title="云计算基础"></a>云计算基础</h3><p><img src="https://github.com/chunInsane/resources/raw/master/image/cloud/云计算基础.png" alt="云计算基础"></p><h3 id="云计算机制"><a href="#云计算机制" class="headerlink" title="云计算机制"></a>云计算机制</h3><p><img src="https://github.com/chunInsane/resources/raw/master/image/cloud/云计算机制.png" alt="云计算机制"></p><h3 id="云计算架构"><a href="#云计算架构" class="headerlink" title="云计算架构"></a>云计算架构</h3><p><img src="https://github.com/chunInsane/resources/raw/master/image/cloud/云计算架构.png" alt="云计算架构"></p><h3 id="使用云"><a href="#使用云" class="headerlink" title="使用云"></a>使用云</h3><p><img src="https://github.com/chunInsane/resources/raw/master/image/cloud/使用云.png" alt="使用云"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;云计算基础&quot;&gt;&lt;a href=&quot;#云计算基础&quot; class=&quot;headerlink&quot; title=&quot;云计算基础&quot;&gt;&lt;/a&gt;云计算基础&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://github.com/chunInsane/resources/raw/mast
+      
+    
+    </summary>
+    
+    
+      <category term="云计算,学习" scheme="http://chuninsane.github.io/tags/%E4%BA%91%E8%AE%A1%E7%AE%97-%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>系统限流保护sentinel</title>
